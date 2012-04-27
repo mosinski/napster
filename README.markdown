@@ -1,4 +1,4 @@
-# Witam oto repozytorium do heroku dla aplikacji <font color="blue"><b>Napster</b></font>#
+# Witam oto repozytorium do heroku dla aplikacji <font color="blue">Napster</font>#
 
 Program będzie polegał na bazie danych z listą piosenek. 
 Użytkownik będzie mogł dodać piosenkę oraz zobaczyć jej Wykonawce Album itd.
