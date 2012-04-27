@@ -5,3 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Fortune.create! :wykonawca => 'Moby',:tytul => 'Lift Me Up',:album => 'Wait',:tekst => 'lalalalalalall siusisdasndoperw'
