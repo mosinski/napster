@@ -18,12 +18,13 @@
     <td><%= fortune.album %></td>
     <td><%= fortune.tekst %></td>
     <td><%= link_to 'Show', fortune %></td>
-    <td><%= link_to 'Edit', edit_fortune_path(fortune) %></td>
-    <td><%= link_to 'Destroy', fortune, confirm: 'Czy napewno chcesz usunąć?', method: :delete %></td>
+    <td><%= link_to 'Edit', edit_fortune_path(fortune), :class => 'btn btn-mini' %></td>
+    <td><%= link_to 'Destroy', fortune, confirm: 'Czy napewno chcesz usunąć?', method: :delete, :class => 'btn btn-mini btn-danger' %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'Dodaj Piosenke', new_fortune_path %>
+<%= link_to 'Dodaj Piosenke', new_fortune_path, :class => 'btn btn-primary' %>
+
