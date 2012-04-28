@@ -3755,7 +3755,8 @@ input[type="submit"].btn.btn-mini {
   left: 0;
   display: block;
   float: left;
-  margin: 0 10px 0 0;
+  margin: 7pt 10px 0 30pt;
+  font-size:17px;
 }
 
 .navbar .nav.pull-right {
