@@ -46,7 +46,7 @@ a:focus {
   outline-offset: -2px;
 }
 
-a:hover,
+a:hover,	
 a:active {
   outline: 0;
 }
