@@ -1,25 +1,28 @@
 <h1>Lista Piosenek Napstera</h1>
-
-<table>
+<style>
+#lewo {border-left:0;}
+#wyk  {text-align:right;}
+</style>
+<table style="border:0">
   <tr>
-    <th>Wykonawca</th>
-    <th>Tytuł</th>
-    <th>Album</th>
-    <th>Tekst</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th id="wyk">Wykonawca</th>
+    <th id="lewo">Tytuł</th>
+    <th id="lewo">Album</th>
+    <th id="lewo">Tekst</th>
+    <th id="lewo"></th>
+    <th id="lewo"></th>
+    <th id="lewo"></th>
   </tr>
 
 <% @fortunes.each do |fortune| %>
-  <tr>
-    <td><%= fortune.wykonawca %></td>
-    <td><%= fortune.tytul %></td>
-    <td><%= fortune.album %></td>
-    <td><%= fortune.tekst %></td>
-    <td><%= link_to 'Pokaż', fortune, :class => 'btn btn-mini' %></td>
-    <td><%= link_to 'Edytuj', edit_fortune_path(fortune), :class => 'btn btn-mini' %></td>
-    <td><%= link_to 'Usuń', fortune, confirm: 'Czy napewno chcesz usunąć?', method: :delete, :class => 'btn btn-mini btn-danger' %></td>
+  <tr style="border-middle:0">
+    <td id="wyk"><%= fortune.wykonawca %></td>
+    <td id="lewo"><%= fortune.tytul %></td>
+    <td id="lewo"><%= fortune.album %></td>
+    <td id="lewo"><%= fortune.tekst %></td>
+    <td id="lewo"><%= link_to 'Pokaż', fortune, :class => 'btn btn-mini' %></td>
+    <td id="lewo"><%= link_to 'Edytuj', edit_fortune_path(fortune), :class => 'btn btn-mini' %></td>
+    <td id="lewo"><%= link_to 'Usuń', fortune, confirm: 'Czy napewno chcesz usunąć?', method: :delete, :class => 'btn btn-mini btn-danger' %></td>
   </tr>
 <% end %>
 </table>
