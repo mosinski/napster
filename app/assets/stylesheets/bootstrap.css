@@ -37,6 +37,7 @@ html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
+  background: transparent url(b.jpg);
 }
 
 a:focus {
@@ -462,6 +463,8 @@ h6 small {
 h1 {
   font-size: 30px;
   line-height: 36px;
+  font-family: 'Audiowide', cursive;
+  color:rgb(24, 0, 0);
 }
 
 h1 small {
