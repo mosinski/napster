@@ -16,13 +16,14 @@
     <th id="lewy"></th>
     <th id="lewy"></th>
   </thead>
+
 <% @fortunes.each do |fortune| %>
   <tr style="border-middle:0">
     <td id="wyko"><%= fortune.wykonawca %></td>
     <td id="lewo"><%= fortune.tytul %></td>
     <td id="lewo"><%= fortune.album %></td>
     <td id="lewo"><%= fortune.tekst %></td>
-    <td id="lewo"><%= link_to 'Pokaż', fortune, :class => 'btn btn-mini' %></td>
+    <td id="lewo"><%= link_to 'Pokaż', fortune, :class => 'btn btn-mini btn-inverse' %></td>
     <td id="lewo"><%= link_to 'Edytuj', edit_fortune_path(fortune), :class => 'btn btn-mini' %></td>
     <td id="lewo"><%= link_to 'Usuń', fortune, confirm: 'Czy napewno chcesz usunąć?', method: :delete, :class => 'btn btn-mini btn-danger' %></td>
   </tr>
