@@ -5,10 +5,8 @@
     <%= f.input :wykonawca %>
     <%= f.input :tytul %>
     <%= f.input :album %>
-    <%= f.input :tekst %>
+    <%= f.input :tekst, :cols => "30", :rows => "10" %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+    <%= f.button :submit, :class => 'btn btn-success'%> <%= link_to 'Powrót', fortunes_path, :class => 'btn btn-warning'%>
 <% end %>

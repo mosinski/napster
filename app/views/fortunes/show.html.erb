@@ -1,25 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Wykonawca:</b>
-  <%= @fortune.wykonawca %>
+  <h1><%= @fortune.wykonawca %> - <%= @fortune.tytul %></h1>
 </p>
 
 <p>
-  <b>Tytuł:</b>
-  <%= @fortune.tytul %>
-</p>
-
-<p>
-  <b>Album:</b>
-  <%= @fortune.album %>
-</p>
-
-<p>
-  <b>Tekst:</b>
-  <%= @fortune.tekst %>
+  <font style="font-family: 'Audiowide', cursive; font-size:14px;"><center><b>Tekst:</b></center></font><br>
+  <font style="font-family: 'Exo', sans-serif; font-size:15px; color:black;"><center><%= @fortune.tekst %></center></font>
 </p>
 
 
-<%= link_to 'Edit', edit_fortune_path(@fortune) %> |
-<%= link_to 'Back', fortunes_path %>
+<%= link_to 'Edytuj', edit_fortune_path(@fortune), :class => 'btn btn-success' %> <%= link_to 'Powrót', fortunes_path, :class => 'btn btn-warning' %>

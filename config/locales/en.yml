@@ -3,3 +3,8 @@
 
 en:
   hello: "Hello world"
+  helpers:
+    submit:
+      create: "Stwórz Piosenke"
+      update: "Aktualizuj Piosenke"
+
