@@ -81,7 +81,6 @@ textarea {
   margin: 0;
   font-size: 100%;
   vertical-align: middle;
-  resize:none;
 }
 
 button,
@@ -159,7 +158,7 @@ body {
   font-size: 13px;
   line-height: 18px;
   color: #333333;
-  background-color: #ffffff;
+  background: transparent url(b.jpg);
 }
 
 a {
@@ -1518,6 +1517,7 @@ table {
 
 .table th {
   font-weight: bold;
+  color:rgb(0, 0, 51);
 }
 
 .table thead th {
@@ -1543,7 +1543,7 @@ table {
 }
 
 .table-bordered {
-  border: 1px solid #dddddd;
+  border: 0px solid #dddddd;
   border-collapse: separate;
   *border-collapse: collapsed;
   border-left: 0;

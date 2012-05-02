@@ -44,7 +44,7 @@ class FortunesController < ApplicationController
 
     respond_to do |format|
       if @fortune.save
-        format.html { redirect_to @fortune, notice: 'Fortune was successfully created.' }
+        format.html { redirect_to @fortune, notice: 'Piosenka pozytywnie stworzona.' }
         format.json { render json: @fortune, status: :created, location: @fortune }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class FortunesController < ApplicationController
 
     respond_to do |format|
       if @fortune.update_attributes(params[:fortune])
-        format.html { redirect_to @fortune, notice: 'Fortune was successfully updated.' }
+        format.html { redirect_to @fortune, notice: 'Piosenka pozytywnie zaktualizowana.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
