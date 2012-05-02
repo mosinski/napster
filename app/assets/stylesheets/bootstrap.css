@@ -81,6 +81,7 @@ textarea {
   margin: 0;
   font-size: 100%;
   vertical-align: middle;
+  resize:none;
 }
 
 button,
