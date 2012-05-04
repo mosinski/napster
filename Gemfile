@@ -68,3 +68,4 @@ group :development do
   gem 'populator'
 end
 gem 'less-rails-bootstrap'
+gem 'will_paginate'
