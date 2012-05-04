@@ -17,9 +17,9 @@ en:
         one:   "Displaying 1 %{model}"
         other: "Displaying all %{count} %{model}"
       single_page_html:
-        zero:  "No %{model} found"
-        one:   "Displaying <b>1</b> %{model}"
-        other: "Displaying <b>all&nbsp;%{count}</b> %{model}"
+        zero:  "Brak Piosenek do wyświetlenia"
+        one:   "Wyświetlana <b>1</b> Piosenka"
+        other: "Wyświetlane <b>wszystkie&nbsp;%{count}</b> Piosenek"
       multi_page: "Wyświetlane Piosenki %{from} - %{to} z  %{count}"
       multi_page_html: "Wyświetlane Piosenki <b>%{from} – %{to}</b> z <b>%{count}</b>"
   errors: &errors
