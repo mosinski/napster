@@ -29,7 +29,12 @@
   </tr>
 <% end %>
 </table>
-<br />
+<div class="page_info" align="center">
+  <%= page_entries_info @fortunes %>
+</div>
+<div class="pager" align="right">
+  <%= will_paginate @fortunes, :container => false %>
+</div>
 
 <%= link_to 'Dodaj Piosenke', new_fortune_path, :class => 'btn btn-primary' %>
 

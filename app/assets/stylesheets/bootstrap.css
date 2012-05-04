@@ -4009,7 +4009,17 @@ input[type="submit"].btn.btn-mini {
 }
 
 .pagination li {
-  display: inline;
+  display: inline-block;
+  *display: inline;
+  margin-bottom: 0;
+  margin-left: 0;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  *zoom: 1;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .pagination a {
@@ -4027,15 +4037,19 @@ input[type="submit"].btn.btn-mini {
 }
 
 .pagination .active a {
-  color: #999999;
-  cursor: default;
+  float: left;
+  padding: 0 14px;
+  line-height: 34px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-left-width: 0;
 }
 
 .pagination .disabled span,
 .pagination .disabled a,
 .pagination .disabled a:hover {
   color: #999999;
-  cursor: default;
+  cursor: pointer;
   background-color: transparent;
 }
 
@@ -4087,13 +4101,18 @@ input[type="submit"].btn.btn-mini {
   padding: 5px 14px;
   background-color: #fff;
   border: 1px solid #ddd;
-  -webkit-border-radius: 15px;
-     -moz-border-radius: 15px;
-          border-radius: 15px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.pager a .disabled {
+  text-decoration: underline;
+  background-color: #f5f5f5;
 }
 
 .pager a:hover {
-  text-decoration: none;
+  text-decoration: underline;
   background-color: #f5f5f5;
 }
 
@@ -4105,7 +4124,6 @@ input[type="submit"].btn.btn-mini {
   float: left;
 }
 
-.pager .disabled a,
 .pager .disabled a:hover {
   color: #999999;
   cursor: default;
