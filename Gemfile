@@ -69,3 +69,4 @@ group :development do
 end
 gem 'less-rails-bootstrap'
 gem 'will_paginate'
+gem 'authlogic'

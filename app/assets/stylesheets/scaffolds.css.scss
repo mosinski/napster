@@ -1,5 +1,5 @@
 body {
-  background: transparent url(b.jpg);
+  background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -28,21 +28,7 @@ div {
     margin-bottom: 10px; } }
 
 #notice {
-  font-weight:bold;
-  position:relative;
-  padding: 7px 15px;
-  margin-bottom:18px;
-  color: rgb(64, 64, 64);
-  background-color: rgb(238, 220, 148);
-  background-repeat: repeat-x;
-  background-image: -moz-linear-gradient(center top , rgb(252, 238, 193), rgb(238, 220, 148));
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  text-shadow: 0pt 1px 0pt rgba(255, 255, 255, 0.5);
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 4px 4px 4px 4px;
-  box-shadow: 0pt 1px 0pt rgba(255, 255, 255, 0.25) inset; }
-
+  color: green; }
 
 .field_with_errors {
   padding: 2px;

@@ -1,4 +1,6 @@
 Napster::Application.routes.draw do
+  resources :users
+
   resources :fortunes
 
   # The priority is based upon order of creation:
