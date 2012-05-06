@@ -1,12 +1,9 @@
-<h1>Listing users</h1>
-
+<h1>Lista Kont</h1>
+<p id="notice"><%= notice %></p>
 <table>
   <tr>
     <th>Username</th>
     <th>Email</th>
-    <th>Crypted password</th>
-    <th>Password salt</th>
-    <th>Persistence token</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,12 +13,9 @@
   <tr>
     <td><%= user.username %></td>
     <td><%= user.email %></td>
-    <td><%= user.crypted_password %></td>
-    <td><%= user.password_salt %></td>
-    <td><%= user.persistence_token %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
@@ -29,3 +23,5 @@
 <br />
 
 <%= link_to 'New User', new_user_path %>
+
+

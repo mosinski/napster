@@ -1,15 +1,32 @@
-<%= simple_form_for(@user) do |f| %>
-  <%= f.error_notification %>
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-  <div class="form-inputs">
-    <%= f.input :username %>
-    <%= f.input :email %>
-    <%= f.input :crypted_password %>
-    <%= f.input :password_salt %>
-    <%= f.input :persistence_token %>
-  </div>
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
   </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation %>
+    </div>
+<br />
+    <%= f.submit :class => 'btn btn-success'%><%= link_to 'Powrót', fortunes_path, :class => 'btn btn-warning' %>
 <% end %>
