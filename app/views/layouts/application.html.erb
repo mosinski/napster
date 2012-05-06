@@ -23,6 +23,7 @@
         <li><a href="http://napsterug.herokuapp.com/about.html">About</a></li>
       </ul>
       <ul class="nav pull-right">
+	<li><font color="yellow" size="2px"><%= notice %></font></li>
 	<% if current_user %>
         <li><%= link_to "Profil", edit_user_path(current_user.id)%></li>
         <li><%= link_to "Wyloguj", :logout%></li>
