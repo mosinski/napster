@@ -34,7 +34,7 @@ class UserSessionsController < ApplicationController
     @user_session.destroy
 
     respond_to do |format|
-      format.html { redirect_to(:fortunes, :notice => 'Wylogowany!') }
+      format.html { redirect_to(:root, :notice => 'Wylogowany!') }
       format.xml { head :ok }
     end
   end
