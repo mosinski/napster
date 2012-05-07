@@ -1,30 +1,28 @@
-<p id="notice"><%= notice %></p>
-
+<div align="right"><%= image_tag @user.avatar.url(:small) %></div>
+<div>
 <p>
-  <b>Username:</b>
-  <%= @user.username %>
+  <font style="font-family:'Audiowide',cursive;font-weight:bold;font-size:16px;">Username:</font>
+  <font style="font-family:'Exo',sans-serif;font-weight:bold;font-size:16px;color:#000066;"><%= @user.username %></font>
 </p>
 
 <p>
-  <b>Email:</b>
-  <%= @user.email %>
+  <font style="font-family:'Audiowide',cursive;font-weight:bold;font-size:16px;">Email:</font>
+  <font style="font-family:'Exo',sans-serif;font-weight:bold;font-size:16px;color:#000066;"><%= @user.email %></font>
 </p>
 
 <p>
-  <b>Crypted password:</b>
-  <%= @user.crypted_password %>
+  <font style="font-family:'Audiowide',cursive;font-weight:bold;font-size:16px;">Crypted password:</font>
+  <font style="font-family:'Exo',sans-serif;font-weight:bold;font-size:13px;color:#000066;"><%= @user.crypted_password %></font>
 </p>
 
 <p>
-  <b>Password salt:</b>
-  <%= @user.password_salt %>
+  <font style="font-family:'Audiowide',cursive;font-weight:bold;font-size:16px;">Password salt:</font>
+  <font style="font-family:'Exo',sans-serif;font-weight:bold;font-size:16px;color:#000066;"><%= @user.password_salt %></font>
 </p>
 
 <p>
-  <b>Persistence token:</b>
-  <%= @user.persistence_token %>
+  <font style="font-family:'Audiowide',cursive;font-weight:bold;font-size:16px;">Persistence token:</font>
+  <font style="font-family:'Exo',sans-serif;font-weight:bold;font-size:13px;color:#000066;"><%= @user.persistence_token %></font>
 </p>
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+</div>
+<%= link_to 'Edytuj', edit_user_path(@user), :class => 'btn btn-success'%><%= link_to 'Powrót', fortunes_path, :class => 'btn btn-warning' %>
