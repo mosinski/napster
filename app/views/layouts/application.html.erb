@@ -19,7 +19,11 @@
     <div class="container">
       <img src="http://napsterug.herokuapp.com/logo.png" alt="napsterlogo" align="left">
       <ul class="nav">
+        <% if current_user %>
+	<li><a href="/fortunes">Strona Główna</a></li>
+	<% else %>
         <li><a href="/">Strona Główna</a></li>
+	<% end %>
         <li><a href="http://napsterug.herokuapp.com/about.html">About</a></li>
       </ul>
       <ul class="nav pull-right">
