@@ -30,9 +30,11 @@
     <td id="lewo"><%= fortune.album %></td>
     <td id="lewo"><%= truncate fortune.tekst,length: 20 %></td>
     <td id="lewo"><%= link_to 'Pokaż', fortune, :class => 'btn btn-mini btn-inverse' %></td>
+    <% if current_user %>
     <td id="lewo"><%= link_to 'Edytuj', edit_fortune_path(fortune), :class => 'btn btn-mini' %></td>
     <td id="lewo"><%= link_to 'Usuń', fortune, confirm: 'Czy napewno chcesz usunąć?', method: :delete, :class => 'btn btn-mini btn-danger' %></td>
-  </tr>
+  <% end %>
+</tr>
 <% end %>
 </table>
 <div class="page_info" align="center">
@@ -41,6 +43,6 @@
 <div class="pager" align="right">
   <%= will_paginate @fortunes, :container => false %>
 </div>
-
+<% if current_user %>
 <%= link_to 'Dodaj Piosenke', new_fortune_path, :class => 'btn btn-primary' %>
-
+<% end %>
