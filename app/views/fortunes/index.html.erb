@@ -5,7 +5,13 @@
 #wyk  {text-align:right;}
 #wyko  {text-align:right; color:#000000;font-family: 'Exo', sans-serif;font-size:15px;}
 #gora {font-family: 'Audiowide', cursive; font-size:14px;}
-</style>	
+</style>
+<%= form_tag request.path, :method => 'get' do %>
+  <% content_tag :label do %>
+    Wyszukiwarka:<%= link_to 'i', @fortune, :class => 'btn btn-mini btn-info', :rel => 'popover', :title => 'Wyszukiwanie', :content => 'This is a test' %>
+    <%= text_field_tag :search, params[:search] %>
+  <% end %>
+<% end %>	
 <table style="border:0" class="table">
   <thead id="gora">
     <th id="wyk">Wykonawca</th>
