@@ -14,9 +14,9 @@
 <% end %>	
 <table style="border:0" class="table">
   <thead id="gora">
-    <th id="wyk">Wykonawca</th>
-    <th id="lewy">Tytuł</th>
-    <th id="lewy">Album</th>
+    <th id="wyk"><%= sortable "wykonawca" %></th>
+    <th id="lewy"><%= sortable "tytul", "Tytuł" %></th>
+    <th id="lewy"><%= sortable "album" %></th>
     <th id="lewy">Tekst</th>
     <th id="lewy"></th>
     <th id="lewy"></th>
