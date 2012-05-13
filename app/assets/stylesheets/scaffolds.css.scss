@@ -24,7 +24,9 @@ a {
 
 div {
   &.field, &.actions {
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  &.navbar-fixed-top .container{
+    width:90%;} }
 
 #notice {
   font-weight:bold;
