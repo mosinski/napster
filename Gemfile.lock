@@ -68,9 +68,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.18)
-    mocha (0.9.12)
     multi_json (1.2.0)
-    nifty-generators (0.4.6)
     pg (0.13.2)
     polyglot (0.3.3)
     populator (1.0.0)
@@ -136,8 +134,6 @@ DEPENDENCIES
   hirb
   jquery-rails
   less-rails-bootstrap
-  mocha
-  nifty-generators
   pg
   populator
   rails (= 3.2.2)
