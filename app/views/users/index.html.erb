@@ -12,7 +12,7 @@
 
 <% @users.each do |user| %>
   <tr>
-    <td><%= image_tag avatar_url(user),:width => 20, :height => 20 %></td>
+    <td><%= image_tag avatar_url(user),:width => 30, :height => 30 %></td>
     <td><%= user.username %></td>
     <td><%= user.email %></td>
     <td><%= link_to 'Show', user %></td>
