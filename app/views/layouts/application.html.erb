@@ -29,7 +29,7 @@
       <ul class="nav pull-right">
 	<li><font color="yellow" size="2px"><%= notice %></font></li>
 	<% if current_user %>
-	<li><%= image_tag avatar_url_small(user) %></li>
+	<li><%= image_tag avatar_url_small(current_user) %></li>
 	<li><font style="color:rgb(153, 153, 153);text-shadow:0pt -1px 0pt rgba(0, 0, 0, 0.25);line-height:37px;font-weight:bold;">
 	<%= current_user.username %></font></li>
         <li><%= link_to "Profil", edit_user_path(current_user.id)%></li>
