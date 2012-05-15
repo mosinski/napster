@@ -22,7 +22,7 @@
         <% if current_user %>
 	<li><a href="/fortunes">Strona Główna</a></li>
 	<% else %>
-        <li><a href="/"><i class="icon-search icon-white"></i>Strona Główna</a></li>
+        <li><a href="/">Strona Główna</a></li>
 	<% end %>
         <li><a href="http://napsterug.herokuapp.com/about.html">About</a></li>
       </ul>
@@ -35,7 +35,7 @@
         <li><%= link_to "Profil", edit_user_path(current_user.id)%></li>
         <li><%= link_to "Wyloguj", :logout%></li>
         <% else %>
-        <li><%= link_to "Rejestracja", new_user_path%><i class="icon-plus-sign"></i><% end %></li>
+        <li><%= link_to "Rejestracja", new_user_path%></li>
         <li><%= link_to "Logowanie", :login %></li>
         <% end %>
 	</div>
