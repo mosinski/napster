@@ -18,9 +18,11 @@ margin-top:-50px;
 margin-left:-100px;
 }
 </style>
+<div class="wyszukiwarka">
 <%= form_tag request.path, :method => 'get' do %>
   <%= text_field_tag  :search, params[:search], :placeholder => 'Wyszukaj:   Wykonawce Tytuł Album' %>
-<% end %>	
+<% end %>
+</div>	
 <table style="border:0" class="table">
   <thead id="gora">
     <th id="wyk"><%= sortable "wykonawca" %></th>
