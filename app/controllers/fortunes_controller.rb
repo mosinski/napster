@@ -41,10 +41,18 @@ class FortunesController < ApplicationController
 
   # POST /fortunes
   # POST /fortunes.json
-  def create
-    @fortune = current_user.fortunes.build(params[:fortune])
-  @fortune.save
-  respond_with(@fortune)
+ def create
+    @fortune = Fortune.new(params[:fortune])
+
+    respond_to do |format|
+      if @fortune.save
+        format.html { redirect_to @fortune, notice: 'Piosenka pozytywnie stworzona' }
+        format.json { render json: @fortune, status: :created, location: @fortune }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @fortune.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # PUT /fortunes/1
