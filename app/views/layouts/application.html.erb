@@ -10,6 +10,7 @@
   <link href='http://fonts.googleapis.com/css?family=Exo:500' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -67,6 +68,10 @@
         );
     });
 </script>
-
+<script>
+ $('div#activity_show').click(function () {
+ $( this ).css('display', 'none');
+ });
+</script>
 </body>
 </html>
