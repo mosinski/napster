@@ -5,7 +5,7 @@ class FortunesController < ApplicationController
   helper_method :sort_column, :sort_direction
   def index
     @fortunes = Fortune.order(sort_column + " " + sort_direction).page(params[:page]).per_page(10).search(params[:search], params[:page])
-    @activities = PublicActivity::Activity.order('created_at DESC').page(params[:page]).per_page(3)
+    @activities = PublicActivity::Activity.order('created_at DESC').page(params[:page]).per_page(5)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @fortunes }
