@@ -5,7 +5,7 @@ class FortunesController < ApplicationController
   helper_method :sort_column, :sort_direction
   def index
     @fortunes = Fortune.order(sort_column + " " + sort_direction).page(params[:page]).per_page(10).search(params[:search], params[:page])
-
+    @activities = PublicActivity::Activity.order('created_at DESC').page(params[:page]).per_page(4)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @fortunes }
@@ -42,17 +42,9 @@ class FortunesController < ApplicationController
   # POST /fortunes
   # POST /fortunes.json
   def create
-    @fortune = Fortune.new(params[:fortune])
-
-    respond_to do |format|
-      if @fortune.save
-        format.html { redirect_to @fortune, notice: 'Piosenka pozytywnie stworzona.' }
-        format.json { render json: @fortune, status: :created, location: @fortune }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @fortune.errors, status: :unprocessable_entity }
-      end
-    end
+    @fortune = current_user.fortunes.build(params[:fortune])
+  @fortune.save
+  respond_with(@fortune)
   end
 
   # PUT /fortunes/1

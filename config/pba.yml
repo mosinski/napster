@@ -1,0 +1,6 @@
+activity:
+        fortune:
+          create: 'create'
+          update: 'update'
+          destroy: 'delete'
+

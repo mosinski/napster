@@ -6,3 +6,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Fortune.create! :wykonawca => 'Moby',:tytul => 'Lift Me Up',:album => 'Wait',:tekst => 'lalalalalalall siusisdasndoperw'
+User.create :username => 'admin',:email => 'matwb@ug.edu.pl',:crypted_password=> '123456', :password_salt => '123456'

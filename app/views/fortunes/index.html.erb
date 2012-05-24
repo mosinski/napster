@@ -5,12 +5,21 @@
 #wyk  {text-align:right;}
 #wyko {text-align:right; color:#000000;font-family: 'Exo', sans-serif;font-size:15px;}
 #gora {font-family: 'Audiowide', cursive; font-size:14px;}
+#activity_info{
+margin-left:100px;
+bottom:5pt;
+right:4pt;
+z-index:3;
+display:block;
+position:absolute;
+}
+.wyszukiwarka{
+margin-top:-50px;
+margin-left:-100px;
+}
 </style>
 <%= form_tag request.path, :method => 'get' do %>
-  <% content_tag :label do %>
-    Wyszukiwarka:
-    <%= text_field_tag :search, params[:search] %>
-  <% end %>
+  <%= text_field_tag  :search, params[:search], :placeholder => 'Wyszukaj:   Wykonawce Tytuł Album' %>
 <% end %>	
 <table style="border:0" class="table">
   <thead id="gora">
@@ -45,4 +54,16 @@
 </div>
 <% if current_user %>
 <%= link_to 'Dodaj Piosenke', new_fortune_path, :class => 'btn btn-primary' %>
+
+<div id="activity_info">
+<h3><center>Aktywności<%= link_to image_tag("icon-show.gif") %></center></h3>
+<div id="activity_show">
+<% for activity in @activities %>
+  <% if activity.text == 'create' %><%= image_tag("add.png") %>Dodano Piosenkę!<br/>
+  <% elsif activity.text == 'update' %><%= image_tag("update.png") %>Edytow. Piosenkę.<br/>
+  <% elsif activity.text == 'delete' %><%= image_tag("delete.png") %>Usunięto Piosenkę.<br/>
+   <% end %>
+    <% end %>
+</div>
+</div>
 <% end %>
