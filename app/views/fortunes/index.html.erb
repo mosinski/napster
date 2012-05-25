@@ -39,7 +39,12 @@ margin-left:-100px;
     <td id="wyko"><%= fortune.wykonawca %></td>
     <td id="lewo"><%= fortune.tytul %></td>
     <td id="lewo"><%= fortune.album %></td>
-    <td id="lewo"><%= truncate fortune.tekst,length: 20 %></td>
+    <td id="lewo"><% if fortune.tekst == '' %><img src="http://www.lingeo.pl/tabela/images/no.png" alt="Brak Tekstu">
+    <% elsif fortune.tekst.include? "ą" or fortune.tekst.include? "ę" or fortune.tekst.include? "ł" or fortune.tekst.include? "ć" %>
+    <img src="http://www.bialystok.pl/images/flags/pl-PL.gif" alt="Polski Tekst">
+    <% elsif fortune.tekst.include? "'s" or fortune.tekst.include? " is " or fortune.tekst.include? "you"  %>
+    <img src="http://en.um.bialystok.pl/images/flags/en-GB.gif" alt="Polski Tekst">
+    <% else %><img src="https://biolincc.nhlbi.nih.gov/static/img/icons/question_mark.png" alt="?" style="margin-left:15px"><% end %></td>
     <td id="lewo"><%= link_to 'Pokaż', fortune, :class => 'btn btn-mini btn-inverse' %></td>
     <% if current_user %>
     <td id="lewo"><%= link_to 'Edytuj', edit_fortune_path(fortune), :class => 'btn btn-mini' %></td>
