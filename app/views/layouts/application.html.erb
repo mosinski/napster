@@ -70,8 +70,11 @@
 </script>
 <script>
  $('div#activity_show').click(function () {
- $( this ).css('display', 'none');
+ $( this ).hide("slow");
  });
+ $('#show').click(function () {
+      $('div#activity_show').show(500);
+    });
 </script>
 </body>
 </html>

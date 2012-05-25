@@ -58,7 +58,7 @@ margin-left:-100px;
 <%= link_to 'Dodaj Piosenke', new_fortune_path, :class => 'btn btn-primary' %>
 <% end %>
 <div id="activity_info">
-<h3><center>Aktywności<%= link_to image_tag("icon-show.gif") %></center></h3>
+<h3 id="show"><center>Aktywności<%= image_tag("icon-show.gif") %></center></h3>
 <div id="activity_show">
 <% for activity in @activities %>
   <% if activity.text == 'create' %><%= image_tag("add.png") %>Dodano Piosenkę!<br/>
