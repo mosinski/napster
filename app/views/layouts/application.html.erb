@@ -43,6 +43,20 @@
     </div>
   </div>
 </div>
+<div class="pasek_boczny">
+<p>
+<strong style="font-family: Garamond; font-size: 26px; color: red;"></strong>
+</p>
+<table align="center" width="100" cellspacing="2" cellpadding="2" style="height:100px; border:0">
+<thead></thead>
+<tbody>
+<tr><td style="border:0"><%= link_to image_tag("new.png"), new_fortune_path %></td></tr>
+<tr style="border:0"><td style="border:0"><%= link_to image_tag("music.png"), fortunes_path %></td></tr>
+<tr><td style="border:0"><%= link_to image_tag("users.png"), users_path %></td></tr>
+<tr><td style="border:0"><%= link_to image_tag("settings.png"),  edit_user_path(current_user.id) %></td></tr>
+</tbody>
+</table>
+</div>
   <div class="container">
       <div class="content">
         <div class="page-header">
