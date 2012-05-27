@@ -1,4 +1,11 @@
 <h1>Editing user</h1>
-
+<% if current_user %>
+<% if current_user.username == @user.username %>
 <%= render 'form' %>
+<% else %>
+<center><%= image_tag("dostep_zabroniony.gif") %></center><br/>
+<% end %>
+<% else %>
+<center><%= image_tag("dostep_zabroniony.gif") %></center><br/>
+<% end %>
 <%= link_to 'Zobacz Konto', @user,:class => 'btn btn-info' %>

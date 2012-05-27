@@ -1,29 +1,25 @@
 <h1>Lista Kont</h1>
+<% if current_user %>
 <p id="notice"><%= notice %></p>
 <table>
   <tr>
-    <th>Avatar</th>
-    <th>Username</th>
-    <th>Email</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>User</th>
   </tr>
 
-<% @users.each do |user| %>
+
   <tr>
-    <td><%= image_tag avatar_url(user),:width => 30, :height => 30 %></td>
-    <td><%= user.username %></td>
-    <td><%= user.email %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<% @users.each do |user| %>
+    <td><%= image_tag avatar_url(user),:width => 50, :height => 50 %><br/><%= user.username %><br/><%= link_to 'Show', user %> <%= link_to 'Edit', edit_user_path(user) %>
+    <% if current_user.username == user.username %><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %><% end %></td>
 <% end %>
+  </tr>
+
 </table>
 
 <br />
 
 <%= link_to 'New User', new_user_path %>
-
+<% else %>
+<center><%= image_tag("dostep_zabroniony.gif") %></center><br/>
+<% end %>
 
