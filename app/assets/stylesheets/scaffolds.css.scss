@@ -1,5 +1,10 @@
 body {
   background: transparent url(b.jpg);
+  background-repeat:no-repeat !important;
+  background-position:0% 0% !important;
+  background-origin: padding-box !important;
+  background-attachment:fixed !important;
+  background-size:cover !important;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;

@@ -159,6 +159,11 @@ body {
   line-height: 18px;
   color: #333333;
   background: transparent url(b.jpg);
+  background-repeat:no-repeat !important;
+  background-position:0% 0% !important;
+  background-origin: padding-box !important;
+  background-attachment:fixed !important;
+  background-size:cover !important;
 }
 
 a {
