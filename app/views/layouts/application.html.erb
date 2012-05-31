@@ -2,7 +2,7 @@
 <html>
 <link rel="Shortcut icon" href="http://napsterug.herokuapp.com/favicon.ico" />
 <head>
-  <title><%= content_for?(:title) ? yield(:title) : "Napster" %></title>
+  <title>Napster - <%= yield(:title) %><% if yield(:title) == '' %>Twoja Biblioteka Piosenek<% end %></title>
   <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
   <![endif]-->

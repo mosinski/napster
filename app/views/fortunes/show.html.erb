@@ -8,6 +8,6 @@
   <font style="font-family: 'Audiowide', cursive; font-size:14px;"><center><b>Tekst:</b></center></font><br>
   <font style="font-family: 'Exo', sans-serif; font-size:15px; color:black;"><center><%=simple_format h @fortune.tekst %></center></font>
 </p>
-
+Piosenkę dodał:<%= @fortune.user_username %><br/>
 <% if current_user %>
 <%= link_to 'Edytuj', edit_fortune_path(@fortune), :class => 'btn btn-success' %><% end %><%= link_to 'Powrót', fortunes_path, :class => 'btn btn-warning' %>

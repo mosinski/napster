@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120524220543) do
+ActiveRecord::Schema.define(:version => 20120531230611) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -29,8 +29,9 @@ ActiveRecord::Schema.define(:version => 20120524220543) do
     t.string   "tytul"
     t.string   "album"
     t.text     "tekst"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
+    t.string   "user_username", :default => "m1l05z", :null => false
   end
 
   create_table "user_sessions", :force => true do |t|

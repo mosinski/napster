@@ -43,7 +43,7 @@ class FortunesController < ApplicationController
   # POST /fortunes.json
  def create
     @fortune = Fortune.new(params[:fortune])
-
+    @fortune.user_username = current_user.username
     respond_to do |format|
       if @fortune.save
         format.html { redirect_to @fortune, notice: 'Piosenka pozytywnie stworzona' }
