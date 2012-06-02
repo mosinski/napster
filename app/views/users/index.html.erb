@@ -1,4 +1,5 @@
-<h1>Lista Kont</h1>
+<% title "Użytkownicy" %>
+<h1><%= yield(:title) %></h1>
 <% if current_user %>
 <%if notice =! '' %>
 <p id="notice"><%= notice %></p>

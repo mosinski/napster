@@ -1,5 +1,11 @@
 <% title "Edycja Piosenki" %>
 <h1><%= yield(:title) %></h1>
-
+<% if current_user %>
+<% if current_user.username == @fortune.user.username %>
 <%= render 'form' %>
-
+<% else %>
+<center><%= image_tag("dostep_zabroniony.gif") %></center><br/>
+<% end %>
+<% else %>
+<center><%= image_tag("dostep_zabroniony.gif") %></center><br/>
+<% end %>
