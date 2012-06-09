@@ -31,7 +31,6 @@ margin-top:20%;
 <% if current_user.username == @user.username %>
 <font id="szary">Zaprosiłeś</font>
 <% else %>
-<font id="szary">Zaproszenia</font>
 <% end %>
 <ul>
   <% for friendship in @user.friendships %>
