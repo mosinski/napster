@@ -19,8 +19,7 @@ margin-right:-8px;
 }
 </style>
 <p align="right">
-  <%= image_tag avatar_url(@user),:width => 150, :height => 150 %><br>
-  <font style="font-family:'Audiowide',cursive;font-weight:bold;font-size:16px;">Twój Avatar</font>
+  <%= image_tag avatar_url(@user),:width => 150, :height => 150 %><br><br>
 </p>
 <div class="ramka">
 <%= image_tag("avatar_border.png")%>
@@ -37,7 +36,7 @@ margin-right:-8px;
 
 <div class="zaprosiles">
 <% if current_user.username == @user.username %>
-<font id="szary">Zaprosiłeś</font>
+<font id="szary">Zaprosiłes</font>
 <% else %>
 <% end %>
 <ul>
