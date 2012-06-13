@@ -89,9 +89,11 @@
 <script>
  $('div#activity_show').click(function () {
  $( this ).hide("slow");
+ $('#show').css("color","#888888");
  });
  $('#show').click(function () {
  $('div#activity_show').show(500);
+ $('#show').css("color","#D8D8D8");
  });
  $('.ukryj').click(function () {
  $('.menu_person').animate({"margin-left": "-=85px"}, "slow");
