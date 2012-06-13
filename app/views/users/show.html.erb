@@ -60,7 +60,7 @@ margin-right:-8px;
 
 <ul>
   <% for user in @user.inverse_friends %>
-    <li id="niebieski"><%= image_tag avatar_url(user),:width => 60, :height => 60,:mouseover => user.username,:title => user.username %>(<%= link_to image_tag("eye.png"), user %> , 
+    <li id="niebieski"><%= link_to image_tag avatar_url(user), user,:width => 60, :height => 60,:title => user.username %>(<%= link_to image_tag("eye.png"), user %> , 
 <% if current_user.username == user.username %>
 <%= link_to 'x', friendship, confirm: 'Jesteś pewnien że chcesz zerwać znajomość?' %><% end %>)
 </li>
