@@ -14,18 +14,15 @@ margin-top:20%;
 }
 .ramka {
 z-index:-99999;
-margin-left:85%;
-margin-top:-100px;
+margin-left:83%;
 }
 </style>
 <p align="right">
-  <%= image_tag avatar_url(@user),:width => 150, :height => 150 %>
-  <%= image_tag("avatar_border.png") %><br>
+  <div class="ramka">
+  <%= image_tag("avatar_border.png") %>
+  </div><%= image_tag avatar_url(@user),:width => 150, :height => 150 %><br>
   <font style="font-family:'Audiowide',cursive;font-weight:bold;font-size:16px;">Twój Avatar</font>
 </p>
-<div class="ramka">
-<%= image_tag("avatar_border.png") %>
-</div>
 <p>
   <font style="font-family:'Audiowide',cursive;font-weight:bold;font-size:16px;">Username:</font>
   <font style="font-family:'Exo',sans-serif;font-weight:bold;font-size:16px;color:#000066;"><%= @user.username %></font>
