@@ -41,11 +41,11 @@ margin-right:-8px;
 <% end %>
 <ul>
   <% for friendship in @user.friendships %>
-   
-    <li id="niebieski">
+   <li id="niebieski">
      <% if current_user.username == @user.username or current_user.username == friendship.friend.username %>
       <%=h friendship.friend.username %>
-	(<%= link_to "x", friendship, :method => :delete %>)
+      <%=h friendship.id %>
+	(<%= link_to "x", friendship, confirm: 'Jesteś pewnien że chcesz zerwać znajomość?' %>)
       <% end %>
     </li>
    <% end %>
@@ -61,7 +61,10 @@ margin-right:-8px;
 
 <ul>
   <% for user in @user.inverse_friends %>
-    <li id="niebieski"><%=h user.username %>(<%= link_to image_tag("eye.png"), user %>)</li>
+    <li id="niebieski"><%=h user.username %>(<%= link_to image_tag("eye.png"), user %> , 
+<% if current_user.username == user.username %>
+<%= link_to 'x', friendship, confirm: 'Jesteś pewnien że chcesz zerwać znajomość?' %><% end %>)
+</li>
   <% end %>
 </ul>
 </div>
