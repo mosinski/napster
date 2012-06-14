@@ -1,15 +1,20 @@
 <% title @fortune.wykonawca + " - " + @fortune.tytul %>
 
-<p id="notice">&nbsp;Piosenka utworzona: <%= @fortune.created_at %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BIG><font color="0066FF"><%= notice %></font></BIG><br>Ostatnia modyfikacja: <%= @fortune.updated_at %></p>
+<p id="notice">&nbsp;Piosenka utworzona: <%= @fortune.created_at %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BIG><font color="0066FF"><%= notice %></font></BIG><br>Ostatnia modyfikacja: <%= @fortune.updated_at %>
+<font style="margin-left:48%;">Piosenkę dodał:</font>
+<font style="font-size:15px;color:green;"><%= @fortune.user_username %></font>
+</p>
 
 <p>
   <h1><%= @fortune.wykonawca %> - <%= @fortune.tytul %></h1><center><div class='spread'><div class='twshare left'><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="funonrails">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script><div class="fb_button" style="background:none;position: relative; top: -3px;"><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="" layout="button_count" show_faces="false" width="45" font=""></fb:like></div></center>
 </p>
-
-<p>
+<div class="teledysk_show">
+<iframe title="Video intro" <%= video_tag(@fortune.videoclip, :size => "350x197",:poster => "napster_video.jpg") %> frameborder="0" > </iframe>
+</div>
+<div class="tekst_show">
   <font style="font-family: 'Audiowide', cursive; font-size:14px;"><center><b>Tekst:</b></center></font><br>
   <font style="font-family: 'Exo', sans-serif; font-size:15px; color:black;"><center><%=simple_format h @fortune.tekst %></center></font>
-</p>
-Piosenkę dodał:<%= @fortune.user_username %><br/>
+</div>
+
 <% if current_user %>
 <%= link_to 'Edytuj', edit_fortune_path(@fortune), :class => 'btn btn-success' %><% end %><%= link_to 'Powrót', fortunes_path, :class => 'btn btn-warning' %>

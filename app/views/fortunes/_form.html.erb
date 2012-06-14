@@ -1,6 +1,10 @@
 <%= simple_form_for(@fortune) do |f| %>
   <%= f.error_notification %>
 
+  <div class="teledysk">
+    <%= f.input :videoclip, :placeholder => 'URL Teledysku' %>
+  </div>
+
   <div class="form-inputs">
     <%= f.input :wykonawca %>
     <%= f.input :tytul %>
@@ -8,5 +12,6 @@
     <%= f.input :tekst, :cols => "30", :rows => "10" %>
   </div>
 
-    <%= f.button :submit, :class => 'btn btn-success'%> <%= link_to 'Powrót', fortunes_path, :class => 'btn btn-warning'%>
+
+<%= f.button :submit, :class => 'btn btn-success'%> <%= link_to 'Powrót', fortunes_path, :class => 'btn btn-warning'%>
 <% end %>

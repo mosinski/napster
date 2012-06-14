@@ -4986,3 +4986,24 @@ a.badge:hover {
 .invisible {
   visibility: hidden;
 }
+
+.teledysk {
+margin-left:70%;
+}
+
+.form-inputs {
+margin-top:-5%;
+font-weight:normal;
+font-style:normal;
+font-size:100%;
+line-height:1;
+font-family:inherit;
+}
+
+.teledysk_show {
+margin-left:70%;
+}
+
+.tekst_show {
+margin-top:-20%;
+}
