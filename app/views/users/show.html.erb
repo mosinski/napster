@@ -10,7 +10,7 @@ margin-top:-35px;
 margin-left:85%;
 }
 .przyciski {
-margin-top:20%;
+margin-top:17%;
 }
 .ramka {
 margin-left:82.7%;
@@ -64,7 +64,7 @@ margin-top:-60px;
   <% for user in @user.inverse_friends %>
     <li id="niebieski"><%= image_tag avatar_url(user),:width => 60, :height => 60,:title => user.username %><%= link_to 'x', friendship, confirm: 'Jesteś pewnien że chcesz zerwać znajomość?' %>
 <div class="avatar_przekierowanie">
-<%= link_to image_tag("nothing.png"), user %>
+<%= link_to image_tag("nothing.png",:title => user.username), user %>
 </div>
 <% if current_user.username == user.username %>
 <% end %>
