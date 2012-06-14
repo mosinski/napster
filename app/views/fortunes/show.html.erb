@@ -9,7 +9,7 @@
   <h1><%= @fortune.wykonawca %> - <%= @fortune.tytul %></h1><center><div class='spread'><div class='twshare left'><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="funonrails">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script><div class="fb_button" style="background:none;position: relative; top: -3px;"><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="" layout="button_count" show_faces="false" width="45" font=""></fb:like></div></center>
 </p>
 <div class="teledysk_show">
-<iframe title="Video intro" <%= video_tag(@fortune.videoclip, :size => "350x197",:poster => "napster_video.jpg") %> frameborder="0" > </iframe>
+<iframe title="Video intro" <%= video_tag(@fortune.videoclip, :size => "350x197",:poster => "http://www.oculu.com/wp-content/uploads/2011/04/20110421231855napster_spotlight.jpg") %> frameborder="0" > </iframe>
 </div>
 <div class="tekst_show">
   <font style="font-family: 'Audiowide', cursive; font-size:14px;"><center><b>Tekst:</b></center></font><br>
@@ -17,4 +17,4 @@
 </div>
 
 <% if current_user %>
-<%= link_to 'Edytuj', edit_fortune_path(@fortune), :class => 'btn btn-success' %><% end %><%= link_to 'Powrót', fortunes_path, :class => 'btn btn-warning' %>
+<%= link_to 'Edytuj', edit_fortune_path(@fortune), :class => 'btn btn-success' %><% end %> <%= link_to 'Powrót', fortunes_path, :class => 'btn btn-warning' %>
