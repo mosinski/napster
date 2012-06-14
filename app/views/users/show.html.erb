@@ -17,6 +17,9 @@ margin-left:82.7%;
 margin-top:-20.1%;
 margin-right:-8px;
 }
+.avatar_przekierowanie {
+margin-top:-60px;
+}
 </style>
 <p align="right">
   <%= image_tag avatar_url(@user),:width => 150, :height => 150 %><br><br>
@@ -59,7 +62,10 @@ margin-right:-8px;
 <% end %>
 <ul>
   <% for user in @user.inverse_friends %>
-    <li id="niebieski"><%= image_tag avatar_url(user),:width => 60, :height => 60,:title => user.username %><%= link_to 'x', friendship, confirm: 'Jesteś pewnien że chcesz zerwać znajomość?' %><%= link_to image_tag("nothing.png"), user %>
+    <li id="niebieski"><%= image_tag avatar_url(user),:width => 60, :height => 60,:title => user.username %><%= link_to 'x', friendship, confirm: 'Jesteś pewnien że chcesz zerwać znajomość?' %>
+<div class="avatar_przekierowanie">
+<%= link_to image_tag("nothing.png"), user %>
+</div>
 <% if current_user.username == user.username %>
 <% end %>
 </li>
