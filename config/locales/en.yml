@@ -145,3 +145,9 @@ en:
         email: "E-mail"
         password: "Hasło"
         remember_me: "Pamiętaj mnie"
+   models:
+      fortune:
+   attributes:
+      fortune:
+	tytul: "Tytuł"
+	videoclip: "Teledysk"
