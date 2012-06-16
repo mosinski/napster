@@ -1,3 +1,16 @@
+<% if (@fortune.videoclip != "") && (@fortune.videoclip.include? "www.youtube.com/watch?v=") %>
+	<% if @fortune.videoclip.match(/^https?:\/\//) %>
+	<% else %>
+	<% @fortune.videoclip = "http://#{@fortune.videoclip}" %>
+	<% end %>
+		<% if @fortune.videoclip.match(/\=0$/) %>
+		<% else %>
+		<% @fortune.videoclip = "#{@fortune.videoclip}?rel=0" %>
+		<% end %>
+<% @fortune.videoclip["watch?v="]= "embed/" %>
+<% @fortune.save %>
+<% end %>
+
 <% title @fortune.wykonawca + " - " + @fortune.tytul %>
 
 <p id="notice">&nbsp;Piosenka utworzona: <%= @fortune.created_at %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BIG><font color="0066FF"><%= notice %></font></BIG><br>Ostatnia modyfikacja: <%= @fortune.updated_at %>
