@@ -139,13 +139,9 @@ en:
       no_authentication_details: "Nie podałeś wymaganych pól"
     models:
       user_session:
-      fortune:
     attributes:
       user_session:
         login: "Nazwa użytkownika"
         email: "E-mail"
         password: "Hasło"
         remember_me: "Pamiętaj mnie"
-    fortune:
-	tytul: "Tytuł"
-	videoclip: "Teledysk"
