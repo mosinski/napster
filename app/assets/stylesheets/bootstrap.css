@@ -4988,16 +4988,19 @@ a.badge:hover {
 }
 
 .teledysk {
-margin-left:70%;
+position:absolute;
+margin-top:-415px;
+margin-left:600px;
+margin-bottom:35%;
 }
 
-.form-inputs {
-margin-top:-4.8%;
+.fortune-inputs {
+margin-top:3%;
 font-weight:normal;
 font-style:normal;
 font-size:100%;
-line-height:1;
 font-family:inherit;
+display:block;
 }
 
 .teledysk_show {
