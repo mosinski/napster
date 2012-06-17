@@ -11,8 +11,8 @@ en:
     error_notification:
       default_message: "Wykryto pewne błedy, obejrzyj je i popraw:"
     # Labels and hints examples
-     labels:
-       password: 'Hasło'
+    # labels:
+    #   password: 'Hasło'
     #   user:
     #     new:
     #       email: 'E-mail para efetuar o sign in.'
