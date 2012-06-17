@@ -28,6 +28,12 @@
 <%= image_tag("napster_video.jpg", :size => "350x197") %>
 <% end %>
 </div>
+<div class="cover_show">
+<% if @fortune.cover != ''%>
+<%= image_tag("napster_cover.png", :size => "330x288") %>
+<%= image_tag(@fortune.cover, :class => "okladka") %>
+<% end %>
+</div>
 <div class="tekst_show">
   <font style="font-family: 'Audiowide', cursive; font-size:14px;"><center><b>Tekst:</b></center></font><br>
   <font style="font-family: 'Exo', sans-serif; font-size:15px; color:black;"><center><%=simple_format h @fortune.tekst %></center></font>
