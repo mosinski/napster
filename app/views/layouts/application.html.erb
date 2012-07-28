@@ -104,6 +104,14 @@
  $('.menu_person').animate({"margin-left": "+=85px"}, "slow");
  $('.ukryj').show(500);
  $('.pokaz').hide("slow");
+ });
+ $('.checkbox_avatar').change(function(){
+    if($(this).is(":checked")) {
+$('.avatarfromurl').show(500);
+    }
+    else {
+$('.avatarfromurl').hide("slow");
+   }
 });
 </script>
 </body>

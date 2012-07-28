@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120617142600) do
+ActiveRecord::Schema.define(:version => 20120728103953) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -54,12 +54,14 @@ ActiveRecord::Schema.define(:version => 20120617142600) do
     t.string   "crypted_password"
     t.string   "password_salt"
     t.string   "persistence_token"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.integer  "checkboxgot",         :default => 0
+    t.string   "avatarurl"
   end
 
 end
