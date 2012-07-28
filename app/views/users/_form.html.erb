@@ -14,7 +14,7 @@
   <div class="field">
     <%= f.label :avatar %>
     <%=link_to "Zmień", "http://pl.gravatar.com/",:class => 'btn btn-mini btn-inverse' %><br /></div>
-<% if @user.avatarurl == '' %>
+<% if @user.avatarurl.nil? %>
 <%= label_tag(:pet_dog, "Avatar z url") %><input type="checkbox" name="checkbox_avatar" value="wartość" class="checkbox_avatar" />
 <% else %>
 <%= label_tag(:pet_dog, "Avatar z url") %><input type="checkbox" name="checkbox_avatar" value="wartość" class="checkbox_avatar" checked/>
