@@ -70,7 +70,7 @@ margin-top:-60px;
     <% if (user.avatarurl.nil?) or (@user.avatarurl == '') %>
 <%= image_tag avatar_url(user),:width => 60, :height => 60,:title => user.username %>
      <% else %>
-%= image_tag(user.avatarurl, :class => "avatar", :size => "60x60") %>
+<%= image_tag(user.avatarurl, :class => "avatar", :size => "60x60") %>
 <% end %>
 <%= link_to 'x', friendship, confirm: 'Jesteś pewnien że chcesz zerwać znajomość?' %>
 <div class="avatar_przekierowanie">
