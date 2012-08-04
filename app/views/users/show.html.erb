@@ -22,7 +22,11 @@ margin-top:-60px;
 }
 </style>
 <p align="right">
+<% if (@user.avatarurl.nil?) or (@user.avatarurl == '') %>
   <%= image_tag avatar_url(@user),:width => 150, :height => 150 %><br><br>
+  <% else %>
+  <%= image_tag(@user.avatarurl, :class => "avatar", :size => "150x150") %><br><br>
+  <% end %>
 </p>
 <div class="ramka">
 <%= image_tag("avatar_border.png")%>
