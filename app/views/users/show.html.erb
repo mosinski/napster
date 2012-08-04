@@ -67,7 +67,7 @@ margin-top:-60px;
 <ul>
   <% for user in @user.inverse_friends %>
     <li id="niebieski">
-    <% if (user.avatarurl.nil?) or (@user.avatarurl == '') %>
+    <% if (user.avatarurl.nil?) or (user.avatarurl == '') %>
 <%= image_tag avatar_url(user),:width => 60, :height => 60,:title => user.username %>
      <% else %>
 <%= image_tag(user.avatarurl, :class => "avatar", :size => "60x60") %>

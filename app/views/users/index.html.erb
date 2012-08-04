@@ -13,7 +13,7 @@
   <tr>
 <% @users.each do |user| %>
     <td>
- <% if (user.avatarurl.nil?) or (@user.avatarurl == '') %>
+ <% if (user.avatarurl.nil?) or (user.avatarurl == '') %>
 <%= image_tag avatar_url(user),:width => 60, :height => 60 %><br/>
  <% else %>
 <%= image_tag(user.avatarurl, :class => "avatar", :size => "60x60") %><br/>
