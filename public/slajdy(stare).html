@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+<title>Simple jQuery Slideshow from JonRaasch.com</title>
+<script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+
+<script type="text/javascript">
+
+/*** 
+    Simple jQuery Slideshow Script
+    Released by Jon Raasch (jonraasch.com) under FreeBSD license: free to use or modify, not responsible for anything, etc.  Please link out to me if you like it :)
+***/
+
+function slideSwitch() {
+    var $active = $('#slideshow DIV.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow DIV:last');
+
+    // use this to pull the divs in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow DIV:first');
+
+    // uncomment below to pull the divs randomly
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 10000 );
+});
+
+</script>
+
+<style type="text/css">
+
+/*** set the width and height to match your images **/
+
+#slideshow {
+    position:relative;
+    height:400px;
+}
+
+#slideshow DIV {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+    opacity:0.0;
+    height: 400px;
+    background: url(tlo_slajdy.png);
+}
+
+#slideshow DIV.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#slideshow DIV.last-active {
+    z-index:9;
+}
+
+
+.nazwa{
+font-size:40px;
+color:black;
+font-weight:bold;
+text-shadow:0pt -1px 20pt rgba(255, 255, 255, 15);
+}
+.normalna{
+font-size:25px;
+color:#E0E0E0;
+text-shadow:0pt -1px 20pt rgba(255, 255, 255, 15);
+}
+.szczegolnie{
+font-size:28px;
+color:#339900;
+font-weight:bold;
+text-shadow:0pt -1px 20pt rgba(0, 0, 25, 15);
+}
+</style>
+</head>
+
+<body style="font-family: Arial, Sans-serif, sans;">
+
+<!-- this will work with any number of images -->
+<!-- set the active class on whichever image you want to show up as the default 
+(otherwise this will be the last image) -->
+
+<div id="slideshow">
+    <div class="active" style="height:400px; width:400px;">
+        <a><center><br>
+		<font class="nazwa">Napster</font><br>
+		<font class="normalna">Czyli Twoja Bioblioteka Utworów</font><br /><br /><br /><br>
+		<font class="szczegolnie">Zobacz co portal Ci oferuje..</font></center></a>
+    </div>
+    
+    <div style="height:400px; width:400px;">
+        <a><center><br><br>
+		<font class="normalna">Dajemy Tobie możliwość<br>dzielenia się tekstami
+		<br>ulubionych piosenek<br></font><br />
+		<font class="szczegolnie">całkowicie ZA DARMO</font></center></a>
+    </div>
+    
+    <div style="height:400px; width:400px;">
+        <a><center><br><br>
+		<font class="normalna">Dodawanie nowych piosenek<br>wyszukiwanie już dodanych</font><br>
+		<img src="Search.png" alt="gravatar" style="width:80px;height:80px;">
+		<img src="music.png" alt="gravatar" style="width:80px;height:80px;"></center></a>
+    </div>
+    
+    <div style="height:400px; width:400px;">
+        <a><center><br><br>
+		<font class="normalna">Personalizacje swojego Profilu<br>
+		<br>Ustawienie Avatara<br><img src="gravatar.png" alt="gravatar" style="width:80px;height:80px;"></font></center></a>
+    </div>
+
+    <div style="height:400px; width:400px;">
+	<a><center><br><br><br>
+		<font class="szczegolnie">Nie czekaj dłużej<br>Sprawdź JUŻ DZIŚ</font></center></a>
+   </div>
+    
+</div>
+
+</body>
+</html>
