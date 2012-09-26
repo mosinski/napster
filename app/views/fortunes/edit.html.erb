@@ -3,6 +3,7 @@
 <% if current_user %>
 <% if current_user.username == @fortune.user_username %>
 <%= render 'form' %>
+<%= button_to @fortune :submit, :class => 'btn btn-success', :value => 'Edytuj Piosenke' %> <%= link_to 'Powrót', fortunes_path, :class => 'btn btn-warning'%>
 <% else %>
 <center><%= image_tag("dostep_zabroniony.gif") %></center><br/>
 <% end %>

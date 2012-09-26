@@ -33,13 +33,13 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :hasło %>
     <%= f.password_field :password %>
   </div>
   <div class="field">
-      <%= f.label :password_confirmation %><br />
+      <%= f.label :Potwierdź_hasło %><br />
       <%= f.password_field :password_confirmation %>
     </div>
 <br />
-    <%= f.submit :class => 'btn btn-success'%><%= link_to 'Powrót', root_url, :class => 'btn btn-warning' %>
+    <%= f.submit :class => 'btn btn-success'%> <%= link_to 'Powrót', root_url, :class => 'btn btn-warning' %>
 <% end %>
