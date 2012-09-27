@@ -2,8 +2,16 @@
 <h1><%= yield(:title) %></h1>
 <% if current_user %>
 <% if current_user.username == @fortune.user_username %>
-<%= render 'form' %>
-<%= button_to @fortune :submit, :class => 'btn btn-success', :value => 'Edytuj Piosenke' %> <%= link_to 'Powrót', fortunes_path, :class => 'btn btn-warning'%>
+
+<%= simple_form_for(@fortune) do |f| %>
+<%= render partial: 'form', locals: { f: f } %>
+  <%= f.button :submit, :class => 'btn btn-success', :value =>"Aktualizuj Piosenke" %> <%= link_to 'Powrót', fortunes_path, :class => 'btn btn-warning'%>
+    <div class="teledysk">
+      <%= f.input :videoclip, :placeholder => 'URL Teledysku' %>
+      <%= f.input :cover, :placeholder => 'URL Okładki Albumu' %>
+    </div>
+<% end %>
+
 <% else %>
 <center><%= image_tag("dostep_zabroniony.gif") %></center><br/>
 <% end %>

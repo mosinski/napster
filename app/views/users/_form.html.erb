@@ -1,4 +1,4 @@
-<%= form_for @user, :html => { :multipart => true } do |f| %>
+
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -11,19 +11,7 @@
     </div>
   <% end %>
 <br /><br />
-  <div class="field">
-    <%= f.label :avatar %>
-    <%=link_to "Zmień", "http://pl.gravatar.com/",:class => 'btn btn-mini btn-inverse' %><br /></div>
-<% if (@user.avatarurl.nil?) or (@user.avatarurl == '') %>
-<%= label_tag(:pet_dog, "Avatar z url") %><input type="checkbox" name="checkbox_avatar" value="wartość" class="checkbox_avatar" />
-<% else %>
-<%= label_tag(:pet_dog, "Avatar z url") %><input type="checkbox" name="checkbox_avatar" value="wartość" class="checkbox_avatar" checked/>
-<% end %>
-<div class="avatarfromurl">
-<%= f.text_field :avatarurl, :placeholder => 'URL Avatar-a' %>
-</div>
-<br/>
-<br/>
+
   <div class="field">
     <%= f.label :username %>
     <%= f.text_field :username %>
@@ -41,5 +29,4 @@
       <%= f.password_field :password_confirmation %>
     </div>
 <br />
-    <%= f.submit :class => 'btn btn-success'%> <%= link_to 'Powrót', root_url, :class => 'btn btn-warning' %>
-<% end %>
+

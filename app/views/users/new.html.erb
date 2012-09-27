@@ -1,6 +1,8 @@
 <% title "Rejestracja" %>
 <h1><%= yield(:title) %></h1>
-
-<%= render 'form' %>
+<%= form_for @user, :html => { :multipart => true } do |f| %>
+<%= render partial: 'form', locals: { f: f } %>
+ <%= f.submit :class => 'btn btn-success', :value => "Stwórz Konto"%> <%= link_to 'Powrót', root_url, :class => 'btn btn-warning' %>
+<% end %>
 
 

@@ -1,5 +1,11 @@
 <% title "Nowa Piosenka" %>
 <h1><%= yield(:title) %></h1>
-
-<%= render 'form' %>
+<%= simple_form_for(@fortune) do |f| %>
+<%= render partial: 'form', locals: { f: f } %>
+  <%= f.button :submit, :class => 'btn btn-success', :value =>"Dodaj Piosenke" %> <%= link_to 'Powrót', fortunes_path, :class => 'btn btn-warning'%>
+    <div class="teledysk">
+      <%= f.input :videoclip, :placeholder => 'URL Teledysku' %>
+      <%= f.input :cover, :placeholder => 'URL Okładki Albumu' %>
+    </div>
+<% end %>
 
