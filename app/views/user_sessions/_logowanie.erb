@@ -1,0 +1,8 @@
+<%= form_for(@user_session || UserSession.new) do |f| %>
+
+  <div class="logowanie_domowa">
+    <%= f.text_field :username, :class => 'logowanie', :placeholder => 'Nazwa Konta' %>
+    <%= f.password_field :password, :class => 'logowanie', :placeholder => 'Hasło' %>
+    <%= f.button :Zaloguj, :class => 'btn btn-success'%>
+  </div>
+<% end %>
