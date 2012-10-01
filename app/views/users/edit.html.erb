@@ -15,8 +15,6 @@
 <div class="avatarfromurl">
 <%= f.text_field :avatarurl, :placeholder => 'URL Avatar-a', :class => "avatar_text_field" %>
 </div>
-<br/>
-<br/>
 <%= render partial: 'form', locals: { f: f } %>
  <%= f.submit :class => 'btn btn-success', :value => "Zapisz Zmiany"%> <%= link_to 'Powrót', root_url, :class => 'btn btn-warning' %>
 <% end %>
