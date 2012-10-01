@@ -1,19 +1,23 @@
-
-  <div class="field">
-    <%= f.label :username %>
-    <%= f.text_field :username %>
-  </div>
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :hasło %>
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-      <%= f.label :Potwierdź_hasło %><br />
-      <%= f.password_field :password_confirmation %>
-    </div>
+<%= form_for(@user || User.new) do |f| %>
+<div class="rejestracja_domowa">
 <br />
+  <div class="field">
+    <%= f.text_field :username, :class =>"rejestracja",:placeholder => 'Nazwa użytkownika' %>
+  </div>
+  <br />
+  <div class="field">
+    <%= f.text_field :email, :class =>"rejestracja",:placeholder => 'Email' %>
+  </div>
+<br />
+  <div class="field">
+    <%= f.password_field :password, :class =>"rejestracja", :placeholder => 'Hasło'%>
+  </div>
+<br />
+  <div class="field">
+      <%= f.password_field :password_confirmation, :class =>"rejestracja", :placeholder => 'Powtórz Hasło' %>
+    </div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= f.submit :class => 'btn btn-success', :value => "Zarejestruj"%>
+<br />
+</div>
+<% end %>
 
