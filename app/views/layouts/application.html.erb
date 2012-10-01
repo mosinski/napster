@@ -109,12 +109,18 @@
  $('.ukryj').show(500);
  $('.pokaz').hide("slow");
  });
+ $(document).ready(function () {
+  if($('.checkbox_avatar').is(":checked")) {
+    $('.avatarfromurl').show(500);
+  }
+ });
  $('.checkbox_avatar').change(function(){
     if($(this).is(":checked")) {
-$('.avatarfromurl').show(500);
+    $('.avatarfromurl').show(500);
     }
     else {
-$('.avatarfromurl').hide("slow");
+    $('.avatar_text_field').val('');
+    $('.avatarfromurl').hide("slow");
    }
 });
 </script>
