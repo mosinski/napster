@@ -25,7 +25,18 @@ div {
   &.field, &.actions {
     margin-bottom: 10px; }
   &.navbar-fixed-top .container{
-    width:90%;} }
+    width:90%;} 
+  &.pager {
+    list-style: none outside none;
+    display: block;
+    position: absolute;
+    width: 200px;
+    line-height: 1;
+    right: 150pt;
+    bottom: -65pt;
+}
+
+}
 
 #notice {
   font-weight:bold;
