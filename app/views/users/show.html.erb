@@ -18,8 +18,11 @@ margin-top:-20.1%;
 .avatar_przekierowanie {
 margin-top:-60px;
 }
+.tymczasowe{
+margin-top:10px;
+}
 </style>
-<p style="margin-top:10px;">
+<p class="tymczasowe">
 <% if (@user.avatarurl.nil?) or (@user.avatarurl == '') %>
   <%= image_tag avatar_url(@user),:width => 150, :height => 150 %><br><br>
   <% else %>
