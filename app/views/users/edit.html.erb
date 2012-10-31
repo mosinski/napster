@@ -16,6 +16,16 @@
 <%= f.text_field :avatarurl, :placeholder => 'URL Avatar-a', :class => "avatar_text_field" %>
 </div>
 <%= render partial: 'form', locals: { f: f } %>
+<div class="efekty_profilu">
+<div class="efekty_profilu_napis">
+<%=label_tag("Efekty na Profilu") %><br><br>
+</div>
+<div class="efekty_wnetrze">
+<%= label_tag("Ptaki") %><input type="checkbox" name="checkbox_ptaki" value="wartość" class="checkbox_ptaki" /><br>
+<%= label_tag("Kółka") %><input type="checkbox" name="checkbox_ptaki" value="wartość" class="checkbox_ptaki" /><br>
+<%= label_tag("Samochód") %><input type="checkbox" name="checkbox_ptaki" value="wartość" class="checkbox_ptaki" />
+</div>
+</div>
  <%= f.submit :class => 'btn btn-success', :value => "Zapisz Zmiany"%> <%= link_to 'Powrót', root_url, :class => 'btn btn-warning' %>
 <% end %>
 <% else %>

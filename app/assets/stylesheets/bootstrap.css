@@ -5063,6 +5063,9 @@ width:200px;
 font-size:16px;
 margin-left:38px;
 }
+#rejestracja_przycisk{
+margin-left:100px;
+}
 .avatar_text_field{
 margin-left:20px;
 margin-top:-20px;
@@ -5070,3 +5073,27 @@ margin-top:-20px;
 #zapamietaj_mnie{
 margin-bottom:15px;
 }
+
+label.iPhoneCheckLabelOn span {
+margin-right: 9px; }
+.iPhoneCheckContainer {
+    border-radius: 8px 8px 8px 8px;
+}
+.efekty_profilu{
+position:fixed;
+display:block;
+top:90pt;
+width:250px;
+height:400px;
+left:500pt;
+}
+.efekty_profilu_napis label{
+width:220px;
+color:black;
+font-size:18px;
+margin-left:20px;
+}
+.efekty_wnetrze{
+margin-top:20px;
+}
+

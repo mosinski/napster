@@ -49,6 +49,9 @@ GEM
     hike (1.2.1)
     hirb (0.6.2)
     i18n (0.6.0)
+    ios-checkboxes (0.2.1)
+      rails (~> 3.1)
+      sass-rails
     journey (1.0.3)
     jquery-rails (2.0.1)
       railties (>= 3.2.0, < 5.0)
@@ -141,6 +144,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   faker
   hirb
+  ios-checkboxes
   jquery-rails
   less-rails-bootstrap
   pg
