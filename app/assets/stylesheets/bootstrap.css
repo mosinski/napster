@@ -5106,6 +5106,7 @@ margin-left:85%;
 }
 .przyciski {
 margin-top:17%;
+z-index:2;
 }
 .ramka {
 margin-top:-20.1%;
@@ -5120,4 +5121,11 @@ margin-top:10px;
 .avatar{
 margin-bottom:-8px;
 margin-left:9px;
+}
+#container{
+}
+canvas{
+position:fixed;
+top:10pt;
+z-index:-1;
 }
