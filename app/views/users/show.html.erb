@@ -1,32 +1,10 @@
-<style>
-#niebieski {font-family:'Exo',sans-serif;font-weight:bold;font-size:16px;color:#000066;}
-#szary     {font-family:'Audiowide',cursive;font-weight:bold;font-size:16px;}
-.zaprosiles {
-margin-top:-50px;
-margin-left:70%;
-}
-.odpowiedziano {
-margin-top:-35px;
-margin-left:85%;
-}
-.przyciski {
-margin-top:17%;
-}
-.ramka {
-margin-top:-20.1%;
-width:170px;
-}
-.avatar_przekierowanie {
-margin-top:-60px;
-}
-.tymczasowe{
-margin-top:10px;
-}
-.avatar{
-margin-bottom:-8px;
-margin-left:9px;
-}
-</style>
+<% if @user.ptaki == '1' %>
+Ptaki włączone
+<% elsif @user.kolka == '1' %>
+Kółka włączone
+<% elsif @user.samochod == '1' %>
+Samochód włączone
+<% end %>
 <p class="tymczasowe">
 <% if (@user.avatarurl.nil?) or (@user.avatarurl == '') %>
   <%= image_tag avatar_url(@user),:width => 150, :height => 150 %><br><br>
