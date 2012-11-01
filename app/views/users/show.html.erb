@@ -67,6 +67,7 @@ Samochód Włączone
 <div class="przyciski">
 <%= link_to 'Edytuj', edit_user_path(@user), :class => 'btn btn-success'%> <%= link_to 'Powrót', fortunes_path, :class => 'btn btn-warning' %>
 </div>
+<% if @user.ptaki == '1' %>
 		<script>
 
 			// Based on http://www.openprocessing.org/visuals/?visualID=6910
@@ -481,6 +482,7 @@ Samochód Włączone
 
 		</script>
 <!-- koniec skryptu ptaki-->
+<% elsif @user.kolka == '1' %>
 		<script>
 
 			var container, stats;
@@ -616,3 +618,4 @@ Samochód Włączone
 			}
 
 		</script>
+<% end %>
