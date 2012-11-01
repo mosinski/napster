@@ -7,9 +7,9 @@ Samochód Włączone
 <% end %>
 <p class="tymczasowe">
 <% if (@user.avatarurl.nil?) or (@user.avatarurl == '') %>
-  <%= image_tag avatar_url(@user),:width => 150, :height => 150, :class => "avatar" %><br><br>
+  <%= image_tag avatar_url(@user),:width => 150, :height => 150, :class => "avatar", :id => "duzy_avatar" %><br><br>
   <% else %>
-  <%= image_tag(@user.avatarurl, :class => "avatar", :size => "150x150") %><br><br>
+  <%= image_tag(@user.avatarurl, :class => "avatar", :size => "150x150", :id => "duzy_avatar") %><br><br>
   <% end %>
 <%= image_tag("avatar_border.png", :class => "ramka") %>
 </p>
@@ -50,9 +50,9 @@ Samochód Włączone
   <% for user in @user.inverse_friends %>
     <li id="niebieski">
     <% if (user.avatarurl.nil?) or (user.avatarurl == '') %>
-<%= image_tag avatar_url(user),:width => 60, :height => 60,:title => user.username %>
+<%= image_tag avatar_url(user), :width => 60, :height => 60,:title => user.username, :id => "avatar_maly" %>
      <% else %>
-<%= image_tag(user.avatarurl, :class => "avatar", :size => "60x60") %>
+<%= image_tag(user.avatarurl, :class => "avatar", :size => "60x60", :title => user.username, :id => "avatar_maly") %>
 <% end %>
 <%= link_to 'x', friendship, confirm: 'Jesteś pewnien że chcesz zerwać znajomość?' %>
 <div class="avatar_przekierowanie">
