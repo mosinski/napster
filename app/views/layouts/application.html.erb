@@ -81,16 +81,28 @@
     </div>
 
 <script type="text/javascript">
-    $(function () {
-         $(".btn").popover(
-            {
-                offset: 5,
-                placement: 'right'
-            }
-        );
-    });
 $(function(){
   $(".checkbox_ptaki").iphoneStyle();
+  $(".checkbox_kolka").iphoneStyle();
+  $(".checkbox_samochod").iphoneStyle();
+});
+$('.checkbox_ptaki').change(function(){
+    if($(this).is(":checked")) {
+    $('.checkbox_kolka').attr('checked', false);
+    $('.checkbox_samochod').attr('checked', false);
+    }
+});
+$('.checkbox_kolka').change(function(){
+    if($(this).is(":checked")) {
+    $('.checkbox_ptaki').attr('checked', false);
+    $('.checkbox_samochod').attr('checked', false);
+    }
+});
+$('.checkbox_samochod').change(function(){
+    if($(this).is(":checked")) {
+    $('.checkbox_kolka').attr('checked', false);
+    $('.checkbox_ptaki').attr('checked', false);
+    }
 });
 </script>
 <script>
