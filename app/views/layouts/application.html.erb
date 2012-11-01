@@ -81,29 +81,36 @@
     </div>
 
 <script type="text/javascript">
-$(function(){
+$(document).ready(function(){
   $(".checkbox_ptaki").iphoneStyle();
   $(".checkbox_kolka").iphoneStyle();
   $(".checkbox_samochod").iphoneStyle();
 });
-$('.checkbox_ptaki').change(function(){
-    if($(this).is(":checked")) {
-    $('.checkbox_kolka').attr('checked', false);
-    $('.checkbox_samochod').attr('checked', false);
-    }
-});
-$('.checkbox_kolka').change(function(){
-    if($(this).is(":checked")) {
-    $('.checkbox_ptaki').attr('checked', false);
-    $('.checkbox_samochod').attr('checked', false);
-    }
-});
-$('.checkbox_samochod').change(function(){
-    if($(this).is(":checked")) {
-    $('.checkbox_kolka').attr('checked', false);
-    $('.checkbox_ptaki').attr('checked', false);
-    }
-});
+	
+setInterval(function() {
+	if($('.checkbox_ptaki').is(":checked")){
+        $('.checkbox_ptaki').prop('checked', true).iphoneStyle("refresh");
+	$('.checkbox_samochod').prop('checked', false).iphoneStyle("refresh");
+	}
+	else {
+	$('.checkbox_ptaki').prop('checked', false).iphoneStyle("refresh");
+	}
+	if($('.checkbox_kolka').is(":checked")){
+        $('.checkbox_ptaki').prop('checked', false).iphoneStyle("refresh");
+	$('.checkbox_samochod').prop('checked', false).iphoneStyle("refresh");
+	}
+	else{
+	$('.checkbox_kolka').prop('checked', false).iphoneStyle("refresh");
+	}
+	if($('.checkbox_samochod').is(":checked")){
+	$('.checkbox_ptaki').prop('checked', false).iphoneStyle("refresh");
+	$('.checkbox_kolka').prop('checked', false).iphoneStyle("refresh");
+	}
+	else{
+	$('.checkbox_samochod').prop('checked', false).iphoneStyle("refresh");
+	}
+        return
+      }, 1500);
 </script>
 <script>
  $('div#activity_show').click(function () {
