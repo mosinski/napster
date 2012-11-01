@@ -5038,7 +5038,7 @@ margin-top:-50px;
     background-image: -moz-linear-gradient(center top , rgb(51, 51, 51), rgb(34, 34, 34));
     background-repeat: repeat-x;
     border-radius: 0px 0px 18px 18px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 10), 0px -1px 0px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 1), 0px -1px 0px rgba(0, 0, 0, 0.1) inset;
     width: 285px;
     margin: -24px 0% -240px 90%;
     color: rgb(35, 35, 35);
