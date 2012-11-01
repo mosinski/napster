@@ -5130,6 +5130,15 @@ height:150px;
 width:60px;
 height:60px;
 }
+.nick_konta{
+    font-family: 'Emblema One', cursive;
+    font-size: 46px;
+    color: black;
+    position: fixed;
+    top: 110pt;
+    margin-left: 100px;
+}
+
 #container{
 }
 canvas{

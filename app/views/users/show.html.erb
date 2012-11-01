@@ -7,16 +7,15 @@ Samochód Włączone
 <% end %>
 <p class="tymczasowe">
 <% if (@user.avatarurl.nil?) or (@user.avatarurl == '') %>
-  <%= image_tag avatar_url(@user),:width => 150, :height => 150, :class => "avatar", :id => "duzy_avatar" %><br><br>
+  <%= image_tag avatar_url(@user),:width => 150, :height => 150, :class => "avatar", :id => "avatar_duzy" %><br><br>
   <% else %>
-  <%= image_tag(@user.avatarurl, :class => "avatar", :size => "150x150", :id => "duzy_avatar") %><br><br>
+  <%= image_tag(@user.avatarurl, :class => "avatar", :size => "150x150", :id => "avatar_duzy") %><br><br>
   <% end %>
 <%= image_tag("avatar_border.png", :class => "ramka") %>
 </p>
-<p>
-  <font style="font-family:'Audiowide',cursive;font-weight:bold;font-size:16px;">Username:</font>
-  <font style="font-family:'Exo',sans-serif;font-weight:bold;font-size:16px;color:#000066;"><%= @user.username %></font>
-</p>
+<div class="nick_konta"
+  <%= @user.username %>
+</div>
 
 <p>
   <font style="font-family:'Audiowide',cursive;font-weight:bold;font-size:16px;">Email:</font>
