@@ -5102,7 +5102,7 @@ margin-left:70%;
 }
 .odpowiedziano {
 margin-top:-35px;
-margin-left:85%;
+position:absolute;
 }
 .przyciski {
 margin-top:17%;
@@ -5134,7 +5134,7 @@ height:60px;
     font-family: 'Emblema One', cursive;
     font-size: 66px;
     color: black;
-    position: fixed;
+    position: absolute;
     top: 110pt;
     margin-left: 180px;
 }
@@ -5143,7 +5143,7 @@ height:60px;
     font-size: 20px;
     font-weight:bold;
     color:#000066;
-    position: fixed;
+    position: absolute;
     top: 140pt;
     margin-left: 180px;
 }
