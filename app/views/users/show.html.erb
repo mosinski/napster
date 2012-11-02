@@ -44,7 +44,7 @@
 <% else %>
 <font id="szary">Znajomi</font>
 <% end %>
-<ul style="list-style-type: inherit;">
+<ul style="list-style-type: decimal;">
   <% for user in @user.inverse_friends %>
     <li id="niebieski">
     <% if (user.avatarurl.nil?) or (user.avatarurl == '') %>
