@@ -60,7 +60,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to root_url, notice: 'Konto uaktualnione!' }
+        format.html { redirect_to user_url, notice: 'Konto uaktualnione!' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
