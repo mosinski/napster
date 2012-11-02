@@ -5138,6 +5138,15 @@ height:60px;
     top: 110pt;
     margin-left: 180px;
 }
+.email_konta{
+    font-family:'Exo',sans-serif;
+    font-size: 20px;
+    font-weight:bold;
+    color:#000066;
+    position: fixed;
+    top: 140pt;
+    margin-left: 180px;
+}
 #container{
 }
 canvas{
