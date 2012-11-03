@@ -36,9 +36,9 @@
 	<li><font color="yellow" size="2px"><%= notice %></font></li>
 	<% if current_user %>
         <% if (current_user.avatarurl.nil?) or (current_user.avatarurl == '') %>
-	<li style="margin-top: -5px;margin-right:2px"><%= image_tag avatar_url(current_user),:width => 50, :height => 50 %></li>
+	<li id="nav_avatar"><%= image_tag avatar_url(current_user),:width => 50, :height => 50 %></li>
         <% else %>
-        <li style="margin-top: -5px;margin-right:2px"><%= image_tag(current_user.avatarurl, :class => "avatar", :size => "50x50") %></li>
+        <li id="nav_avatar"><%= image_tag(current_user.avatarurl, :class => "avatar", :size => "50x50") %></li>
         <% end %>
 	<li><font style="color:rgb(153, 153, 153);text-shadow:0pt -1px 0pt rgba(0, 0, 0, 0.25);line-height:37px;font-weight:bold;">
 	<%= current_user.username %></font></li>
