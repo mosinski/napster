@@ -29,7 +29,7 @@
 
 <div class="email_konta">
   <%= @user.email %><br>
-Dodał <% if @fortune.find_by_user_username(@user.username).count %>
+Dodał <% @fortune.find_by_user_username(@user.username).count %>
 </div>
 
 <div class="zaprosiles">
