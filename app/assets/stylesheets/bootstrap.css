@@ -5094,8 +5094,27 @@ display:none;
 width:20px;
 display:none;
 }
-#niebieski {font-family:'Exo',sans-serif;font-weight:bold;font-size:16px;color:#000066;}
-#szary     {font-family:'Audiowide',cursive;font-weight:bold;font-size:16px;}
+.szesciany_text_field{
+width:20px;
+display:none;
+}
+.woda_text_field{
+width:20px;
+display:none;
+}
+#niebieski {
+font-family:'Exo',sans-serif;
+font-weight:bold;
+font-size:16px;
+color:#000066;
+}
+#szary {
+font-family:'Audiowide',cursive;
+font-weight:bold;
+font-size:18px;
+margin-left: 13px;
+color:black;
+}
 .zaprosiles {
 margin-top:-50px;
 margin-left:70%;

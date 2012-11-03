@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121101183405) do
+ActiveRecord::Schema.define(:version => 20121103115539) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -61,6 +61,8 @@ ActiveRecord::Schema.define(:version => 20121101183405) do
     t.string   "ptaki",             :default => "0"
     t.string   "kolka",             :default => "0"
     t.string   "samochod",          :default => "0"
+    t.string   "szesciany",         :default => "0"
+    t.string   "woda",              :default => "0"
   end
 
 end

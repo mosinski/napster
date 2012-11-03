@@ -32,9 +32,19 @@
 <%= label_tag("Kółka") %><input type="checkbox" name="checkbox_kolka" value="wartość" class="checkbox_kolka" /><%= f.text_field :kolka, :class => "kolka_text_field" %><br>
 <% end %>
 <% if @user.samochod == '1' %>
-<%= label_tag("Kółka 2") %><input type="checkbox" name="checkbox_samochod" value="wartość" class="checkbox_samochod" checked/><%= f.text_field :samochod, :class => "samochod_text_field" %>
+<%= label_tag("Kółka 2") %><input type="checkbox" name="checkbox_samochod" value="wartość" class="checkbox_samochod" checked/><%= f.text_field :samochod, :class => "samochod_text_field" %><br>
 <% else %>
-<%= label_tag("Kółka 2") %><input type="checkbox" name="checkbox_samochod" value="wartość" class="checkbox_samochod" /><%= f.text_field :samochod, :class => "samochod_text_field" %>
+<%= label_tag("Kółka 2") %><input type="checkbox" name="checkbox_samochod" value="wartość" class="checkbox_samochod" /><%= f.text_field :samochod, :class => "samochod_text_field" %><br>
+<% end %>
+<% if @user.szesciany == '1' %>
+<%= label_tag("Kwadrat") %><input type="checkbox" name="checkbox_szesciany" value="wartość" class="checkbox_szesciany" checked/><%= f.text_field :szesciany, :class => "szesciany_text_field" %><br>
+<% else %>
+<%= label_tag("Kwadrat") %><input type="checkbox" name="checkbox_szesciany" value="wartość" class="checkbox_szesciany" /><%= f.text_field :szesciany, :class => "szesciany_text_field" %><br>
+<% end %>
+<% if @user.woda == '1' %>
+<%= label_tag("Woda") %><input type="checkbox" name="checkbox_woda" value="wartość" class="checkbox_woda" checked/><%= f.text_field :woda, :class => "woda_text_field" %><br>
+<% else %>
+<%= label_tag("Woda") %><input type="checkbox" name="checkbox_woda" value="wartość" class="checkbox_woda" /><%= f.text_field :woda, :class => "woda_text_field" %><br>
 <% end %>
 </div>
 </div>
