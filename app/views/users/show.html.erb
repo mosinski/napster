@@ -39,7 +39,7 @@
    <li id="niebieski">
      <% if current_user.username == @user.username or current_user.username == friendship.friend.username %>
      <% if (friendship.friend.avatarurl.nil?) or (friendship.friend.avatarurl == '') %>
-      <%= image_tag avatar_url(friendship.friend.), :width => 60, :height => 60, :title => friendship.friend.username, :id => "avatar_maly" %>
+      <%= image_tag avatar_url(friendship.friend), :width => 60, :height => 60, :title => friendship.friend.username, :id => "avatar_maly" %>
       <% else %>
       <%= image_tag(friendship.friend.avatarurl, :class => "avatar", :size => "60x60", :title => friendship.friend.username, :id => "avatar_maly") %>
       <% end %>
