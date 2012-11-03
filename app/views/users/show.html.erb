@@ -39,17 +39,13 @@
 </div>
 
 <div class="odpowiedziano">
-<% if current_user.username == @user.username %>
-<font id="szary">Odpowiedzieli</font>
-<% else %>
 <font id="szary">Znajomi</font>
-<% end %>
 <ul style="list-style-type: decimal;">
   <% for user in @user.inverse_friends %>
     <li id="niebieski">
-    <% if (user.avatarurl.nil?) or (user.avatarurl == '') %>
-<%= image_tag avatar_url(user), :width => 60, :height => 60,:title => user.username, :id => "avatar_maly" %>
-     <% else %>
+<% if (user.avatarurl.nil?) or (user.avatarurl == '') %>
+<%= image_tag avatar_url(user), :width => 60, :height => 60, :title => user.username, :id => "avatar_maly" %>
+<% else %>
 <%= image_tag(user.avatarurl, :class => "avatar", :size => "60x60", :title => user.username, :id => "avatar_maly") %>
 <% end %>
 <%= link_to 'x', friendship, confirm: 'Jesteś pewnien że chcesz zerwać znajomość?' %>
