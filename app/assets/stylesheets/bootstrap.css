@@ -5101,7 +5101,7 @@ margin-top:-50px;
 margin-left:70%;
 }
 .odpowiedziano {
-top:305px;
+top:295px;
 position:absolute;
 }
 .odpowiedziano a{
@@ -5109,9 +5109,7 @@ display:block;
 margin-left: 60px;
 margin-top: -62px;
 }
-.odpowiedziano li{
-margin-bottom:60px;
-}
+
 .przyciski {
 margin-top:17%;
 z-index:2;
@@ -5121,7 +5119,8 @@ margin-top:-20.1%;
 width:170px;
 }
 .avatar_przekierowanie {
-margin-top:-60px;
+margin-top: 45px;
+margin-left: -60px;
 }
 .tymczasowe{
 margin-top:10px;
