@@ -15,7 +15,7 @@
 
 <p id="notice">&nbsp;Piosenka utworzona: <%= @fortune.created_at.strftime("%d-%m-%Y") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BIG><font color="0066FF"><%= notice %></font></BIG><br>Ostatnia modyfikacja: <%= @fortune.updated_at.strftime("%d-%m-%Y") %>
 <font style="margin-left:48%;">Piosenkę dodał:</font>
-<font style="font-size:15px;color:green;"><%= @fortune.user_username %></font>
+<font style="font-size:15px;color:green;"><%= link_to (@fortune.user_username), @user = User.find_all_by_username(@fortune.user_username) %></font>
 </p>
 
 <p>
