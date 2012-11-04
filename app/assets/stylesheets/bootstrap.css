@@ -5121,6 +5121,10 @@ font-weight:bold;
 font-size:16px;
 color:#000066;
 }
+#niebieski img{
+width:60px;
+height:60px;
+}
 #szary {
 font-family:'Audiowide',cursive;
 font-weight:bold;
