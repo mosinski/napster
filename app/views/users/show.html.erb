@@ -31,7 +31,7 @@
   <%= @user.email %><br>
 </div>
 <div class="piosenki_konta">
-Dodał <%= @fortune = Fortune.find_all_by_user_username(@user.username).count %> piosenek\ki
+Dodał <%= @fortune = Fortune.find_all_by_user_username(@user.username).count %> piosenek
 </div>
 
 <div class="zaprosiles">
@@ -47,9 +47,9 @@ Dodał <%= @fortune = Fortune.find_all_by_user_username(@user.username).count %>
       <% else %>
       <%= image_tag(friendship.friend.avatarurl, :class => "avatar", :size => "60x60", :title => friendship.friend.username, :id => "avatar_maly") %>
       <% end %>
-	<%= link_to "x", friendship, confirm: 'Jesteś pewnien że chcesz anulować zaproszenie?' %>
+	<%= link_to "x", friendship, confirm: 'Jesteś pewnien że chcesz zerwać znajomość?' %>
 	<div class="avatar_przekierowanie">
-	<%= link_to image_tag("nothing.png",:title => friendship.friend.username), @user = User.find_all_by_username(friendship.friend.username) %>
+        <%= link_to image_tag("nothing.png", :title => friendship.friend.username), user = User.find_all_by_username(friendship.friend.username) %>
 	</div>
       <% end %>
      <% end %>
@@ -70,12 +70,12 @@ Dodał <%= @fortune = Fortune.find_all_by_user_username(@user.username).count %>
 <% else %>
 <%= image_tag(user.avatarurl, :class => "avatar", :size => "60x60", :title => user.username, :id => "avatar_maly") %>
 <% end %>
+<% if current_user.username == @user.username %>
 <%= link_to 'x', friendship, confirm: 'Jesteś pewnien że chcesz zerwać znajomość?' %>
+<% end %>
 <div class="avatar_przekierowanie">
 <%= link_to image_tag("nothing.png",:title => user.username), user %>
 </div>
-<% if current_user.username == user.username %>
-<% end %>
 </li>
   <% end %>
 </ul>
