@@ -28,7 +28,10 @@
 </div>
 
 <div class="email_konta">
-  <%= @user.email %>
+  <%= @user.email %><br>
+</div>
+<div class="piosenki_konta">
+Dodał <%= @fortune = Fortune.find_all_by_user_username(@user.username).count %>
 </div>
 
 <div class="zaprosiles">

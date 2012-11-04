@@ -5186,6 +5186,15 @@ height:60px;
     top: 140pt;
     margin-left: 180px;
 }
+.piosenki_konta{
+    font-family: 'Audiowide',cursive;
+    font-size: 20px;
+    font-weight:bold;
+    color:black;
+    position: absolute;
+    top: 160pt;
+    margin-left: 180px;
+}
 #container{
 }
 canvas{
