@@ -43,14 +43,11 @@ Dodał <%= @fortune = Fortune.find_all_by_user_username(@user.username).count %>
      <% if @user.inverse_friends.find_by_username(friendship.friend.username).nil?%>
    <li id="niebieski">
       <% if (friendship.friend.avatarurl.nil?) or (friendship.friend.avatarurl == '') %>
-      <%= image_tag avatar_url(friendship.friend), :width => 60, :height => 60, :title => friendship.friend.username, :id => "avatar_maly" %>
+      <%= link_to image_tag(avatar_url(friendship.friend), :width => 60, :height => 60, :title => friendship.friend.username, :id => "avatar_maly"), user = User.find_all_by_username(friendship.friend.username) %>
       <% else %>
-      <%= image_tag(friendship.friend.avatarurl, :class => "avatar", :size => "60x60", :title => friendship.friend.username, :id => "avatar_maly") %>
+      <%= link_to image_tag(friendship.friend.avatarurl, :class => "avatar", :size => "60x60", :title => friendship.friend.username, :id => "avatar_maly"), user = User.find_all_by_username(friendship.friend.username) %>
       <% end %>
 	<%= link_to "x", friendship, confirm: 'Jesteś pewnien że chcesz zerwać znajomość?' %>
-	<div class="avatar_przekierowanie">
-        <%= link_to image_tag("nothing.png", :title => friendship.friend.username), user = User.find_all_by_username(friendship.friend.username) %>
-	</div>
       <% end %>
      <% end %>
     </li>
@@ -63,19 +60,16 @@ Dodał <%= @fortune = Fortune.find_all_by_user_username(@user.username).count %>
 <div class="odpowiedziano">
 <font id="szary">Znajomi</font>
 <ul style="list-style-type: decimal;">
-  <% for user in @user.inverse_friends %>
-    <li id="niebieski">
+<% for user in @user.inverse_friends %>
+<li id="niebieski">
 <% if (user.avatarurl.nil?) or (user.avatarurl == '') %>
-<%= image_tag avatar_url(user), :width => 60, :height => 60, :title => user.username, :id => "avatar_maly" %>
+<%= link_to image_tag(avatar_url(user), :width => 60, :height => 60, :title => user.username, :id => "avatar_maly"), user %>
 <% else %>
-<%= image_tag(user.avatarurl, :class => "avatar", :size => "60x60", :title => user.username, :id => "avatar_maly") %>
+<%= link_to image_tag(user.avatarurl, :class => "avatar", :size => "60x60", :title => user.username, :id => "avatar_maly"), user %>
 <% end %>
 <% if current_user.username == @user.username %>
 <%= link_to 'x', friendship, confirm: 'Jesteś pewnien że chcesz zerwać znajomość?' %>
 <% end %>
-<div class="avatar_przekierowanie">
-<%= link_to image_tag("nothing.png",:title => user.username), user %>
-</div>
 </li>
   <% end %>
 </ul>
