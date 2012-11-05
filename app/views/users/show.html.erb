@@ -1,3 +1,9 @@
+<style>
+footer {
+position:ablosute;
+bottom:2pt;
+}
+</style>
 <% if @user.ptaki == '1' %>
 <div id="container"></div>
 <script src="http://napsterug.herokuapp.com/ptaki.js"></script>
@@ -74,6 +80,6 @@ Dodał <%= @fortune = Fortune.find_all_by_user_username(@user.username).count %>
   <% end %>
 </ul>
 </div>
-<div class="przyciski" style="position:absolute;bottom:20px;">
+<div class="przyciski" style="position:absolute;bottom:30px;">
 <%= link_to 'Edytuj', edit_user_path(@user), :class => 'btn btn-success'%> <%= link_to 'Powrót', fortunes_path, :class => 'btn btn-warning' %>
 </div>
