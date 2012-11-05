@@ -23,7 +23,7 @@ section {
 
 footer{
 width: 70%;
-position:absolute;
+position:relative;
 bottom:2pt;
 }
 
@@ -5154,9 +5154,9 @@ position:absolute;
 }
 
 .przyciski {
-position: absolute;
+position: relative;
 bottom: 50px;
-z-index:2;
+z-index:-1;
 }
 .ramka {
 margin-top:-20.1%;
