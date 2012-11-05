@@ -5210,3 +5210,21 @@ z-index:-1;
 #world{
 right:0pt;
 }
+.fb-like-box {
+margin-left:76%;
+margin-top:-25%;
+}
+.zalozenia {
+margin-top:-25%;
+}
+a#forkme_banner{
+position: fixed;
+bottom:0pt;
+right:0pt;
+width:136px;
+height:135px;
+display:block;
+background:url("fork-me-on-github.png") no-repeat scroll 0pt 0pt transparent;
+text-indent:-9000px;
+z-index:3;
+}
