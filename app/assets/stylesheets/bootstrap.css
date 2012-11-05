@@ -21,6 +21,12 @@ section {
   display: block;
 }
 
+footer{
+width: 70%;
+position:absolute;
+bottom:2pt;
+}
+
 audio,
 canvas,
 video {
@@ -5148,7 +5154,8 @@ position:absolute;
 }
 
 .przyciski {
-margin-top:17%;
+position: absolute;
+bottom: 50px;
 z-index:2;
 }
 .ramka {
