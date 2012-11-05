@@ -74,6 +74,6 @@ Dodał <%= @fortune = Fortune.find_all_by_user_username(@user.username).count %>
   <% end %>
 </ul>
 </div>
-<div class="przyciski">
+<div class="przyciski" style="position:absolute;bottom:20px;">
 <%= link_to 'Edytuj', edit_user_path(@user), :class => 'btn btn-success'%> <%= link_to 'Powrót', fortunes_path, :class => 'btn btn-warning' %>
 </div>
