@@ -5236,3 +5236,8 @@ background:url("fork-me-on-github.png") no-repeat scroll 0pt 0pt transparent;
 text-indent:-9000px;
 z-index:3;
 }
+.notice_link{
+color:green;
+font-size:15px;
+}
+

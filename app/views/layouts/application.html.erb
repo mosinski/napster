@@ -178,6 +178,13 @@ setInterval(function() {
       }, 1500);
 </script>
 <script>
+$(".notice_link").hover(function () {
+$('.notice_link').popover('show');
+},
+function (){
+$('.notice_link').popover('hide');
+}
+);
  $('div#activity_show').click(function () {
  $( this ).hide("slow");
  $('#show').css("color","#888888");

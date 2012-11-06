@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require ios-checkboxes
 //= require_tree .
+//= require bootstrap-tooltip.js
+//= require bootstrap-popover.js
 // facebook recommend button                                                    
 $(function() {
         likebutton =
