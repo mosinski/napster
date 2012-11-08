@@ -15,7 +15,7 @@
  <% if (user.avatarurl.nil?) or (user.avatarurl == '') %>
 <%= image_tag avatar_url(user),:width => 60, :height => 60 %><br/>
  <% else %>
-<%= image_tag(user.avatarurl, :class => "avatar", :size => "60x60", :id => "avatar_maly") %><br/>
+<%= image_tag(user.avatarurl, :class => "avatar", :size => "60x60", :id => "avatar_maly") %><br/><br/>
  <% end %>
 <%= user.username %><br/><%= link_to image_tag("eye.png"), user %>
     <% if current_user.username == user.username %><%= link_to image_tag("edit.png"), edit_user_path(user) %>
