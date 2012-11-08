@@ -19,7 +19,7 @@
  <% end %>
 <%= user.username %><br/><%= link_to image_tag("eye.png"), user %>
     <% if current_user.username == user.username %><%= link_to image_tag("edit.png"), edit_user_path(user) %>
-<%= link_to image_tag("trash.png"), user, :confirm => 'Are you sure?', :method => :delete %><% else %><%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %><% end %></td>
+<%= link_to image_tag("trash.png"), user, :confirm => 'Are you sure?', :method => :delete %><% end %></td>
 <% end %>
   </tr>
 
