@@ -15,8 +15,9 @@
 //= require ios-checkboxes
 //= require_tree .
 //= require twitter/bootstrap
-//= require bootstrap-tooltip.js
-//= require bootstrap-popover.js
+//= require bootstrap-tooltip
+//= require bootstrap-popover
+//= require jquery.pwdstr-1.0.source
 // facebook recommend button                                                    
 $(function() {
         likebutton =
