@@ -17,7 +17,6 @@
 //= require twitter/bootstrap
 //= require bootstrap-tooltip.js
 //= require bootstrap-popover.js
-//= require jquery.pwdstr-1.0.source.js
 // facebook recommend button                                                    
 $(function() {
         likebutton =
