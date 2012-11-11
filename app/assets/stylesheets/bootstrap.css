@@ -5240,4 +5240,10 @@ z-index:3;
 color:green;
 font-size:15px;
 }
-
+#password_time{
+color:white;
+margin-left:12px;
+}
+.password_test{
+margin-bottom:-5px;
+}
