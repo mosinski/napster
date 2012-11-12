@@ -75,7 +75,7 @@ Dodał <%= @fortune = Fortune.find_all_by_user_username(@user.username).count %>
 <% else %>
 <%= link_to image_tag(user.avatarurl, :class => "avatar", :size => "60x60", :title => user.username, :id => "avatar_maly"), user %>
 <% end %>
-<% if current_user.username == @user.username %>
+<% if current_user && (current_user.username == @user.username) %>
 <%= link_to 'x', friendship, confirm: 'Jesteś pewnien że chcesz zerwać znajomość?' %>
 <% end %>
 </li>
