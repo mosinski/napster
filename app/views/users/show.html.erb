@@ -30,7 +30,7 @@ display:none;
 
 <div class="nick_konta">
 <%= @user.username %>
-<% if (current_user.username != @user.username) && (current_user.inverse_friends.find_by_username(@user.username).nil?) && (current_user.friendships.find_by_friend_id(@user.id).nil?) %>
+<% if current_user && (current_user.username != @user.username) && (current_user.inverse_friends.find_by_username(@user.username).nil?) && (current_user.friendships.find_by_friend_id(@user.id).nil?) %>
 <%= link_to image_tag("add-friend.png", :title => "Dodaj do znajomych"), friendships_path(:friend_id => @user), :method => :post %>
 <% end %>
 </div>
