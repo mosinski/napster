@@ -43,7 +43,7 @@ Dodał <%= @fortune = Fortune.find_all_by_user_username(@user.username).count %>
 </div>
 
 <div class="zaprosiles">
-<% if current_user.username == @user.username %>
+<% if current_user && (current_user.username == @user.username) %>
 <font id="szary">Zaprosiłes</font>
 <ul>
   <% for friendship in @user.friendships %>
