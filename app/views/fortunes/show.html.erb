@@ -17,7 +17,7 @@
 
 <p id="notice">&nbsp;Piosenka utworzona: <%= @fortune.created_at.strftime("%d-%m-%Y") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BIG><font color="0066FF"><%= notice %></font></BIG><br>Ostatnia modyfikacja: <%= @fortune.updated_at.strftime("%d-%m-%Y") %>
 <font style="margin-left:48%;">Piosenkę dodał:</font>
-<font style="font-size:15px;color:green;"><%= link_to (@fortune.user_username), @user = User.find_all_by_username(@fortune.user_username), :class => "notice_link", :rel => "popover", "data-original-title" => @fortune.user_username, "data-placement" => "right", "data-html" => "true", "data-content" => "Dodał "+Fortune.find_all_by_user_username(@fortune.user_username).count.to_s+" piosenek"+ Friendship.find_all_by_friend_id(User.find_all_by_username(@fortune.user_username)).count.to_s %></font>
+<font style="font-size:15px;color:green;"><%= link_to (@fortune.user_username), @user = User.find_all_by_username(@fortune.user_username), :class => "notice_link", :rel => "popover", "data-original-title" => @fortune.user_username, "data-placement" => "right", "data-html" => "true", "data-content" => "Dodał "+Fortune.find_all_by_user_username(@fortune.user_username).count.to_s+" piosenek<br>Ma "+ Friendship.find_all_by_friend_id(User.find_all_by_username(@fortune.user_username)).count.to_s+" znajomych" %></font>
 </p>
 
 <p>
