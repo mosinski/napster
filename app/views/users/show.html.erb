@@ -39,7 +39,7 @@ display:none;
   <%= @user.email %><br>
 </div>
 <div class="piosenki_konta">
-Dodał <%= @fortune = Fortune.find_all_by_user_username(@user.username).count %> piosenek
+Dodał <%= link_to Fortune.find_all_by_user_username(@user.username).count, fortunes_path+"?utf8=✓&search="+@user.username.to_s %> piosenek
 </div>
 
 <div class="zaprosiles">
