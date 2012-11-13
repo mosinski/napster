@@ -4362,6 +4362,7 @@ input[type="submit"].btn.btn-mini {
   z-index: 1010;
   display: none;
   padding: 5px;
+  width: 60px;
 }
 
 .popover.top {
@@ -4370,7 +4371,7 @@ input[type="submit"].btn.btn-mini {
 
 .popover.right {
   margin-left: 5px;
-  width: 100px;
+  width: 60px;
 }
 
 .popover.bottom {
