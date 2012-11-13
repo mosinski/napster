@@ -4370,6 +4370,7 @@ input[type="submit"].btn.btn-mini {
 
 .popover.right {
   margin-left: 5px;
+  width: 100px;
 }
 
 .popover.bottom {
