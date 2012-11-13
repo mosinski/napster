@@ -32,6 +32,8 @@ GEM
     authlogic (3.1.0)
       activerecord (>= 3.0.7)
       activerecord (>= 3.0.7)
+    better_exception_app (0.0.4)
+      rails (>= 3.2)
     builder (3.0.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -141,6 +143,7 @@ PLATFORMS
 
 DEPENDENCIES
   authlogic
+  better_exception_app
   coffee-rails (~> 3.2.1)
   faker
   hirb
