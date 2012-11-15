@@ -41,7 +41,10 @@ class UserSessionsController < ApplicationController
 
   def createfb
     session[:current_user] = {:image => request.env['omniauth.auth'][:info][:image],:name => request.env['omniauth.auth'][:info][:name]}
-    redirect_to (:fortunes)
+    respond_to do |format|
+    format.html { redirect_to (:fortunes, :notice => 'Zalogowany!') }
+    format.xml { head :ok }
+    end
   end
 
   def destroyfb
