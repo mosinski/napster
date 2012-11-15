@@ -35,6 +35,7 @@ GEM
     better_exception_app (0.0.4)
       rails (>= 3.2)
     builder (3.0.0)
+    certified (0.1.1)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -48,8 +49,12 @@ GEM
       multi_json (~> 1.0)
     faker (1.0.1)
       i18n (~> 0.4)
+    faraday (0.8.4)
+      multipart-post (~> 1.1)
+    hashie (1.2.0)
     hike (1.2.1)
     hirb (0.6.2)
+    httpauth (0.2.0)
     i18n (0.6.0)
     ios-checkboxes (0.2.1)
       rails (~> 3.1)
@@ -59,6 +64,8 @@ GEM
       railties (>= 3.2.0, < 5.0)
       thor (~> 0.14)
     json (1.6.6)
+    jwt (0.1.5)
+      multi_json (>= 1.0)
     less (2.1.0)
       commonjs (~> 0.2.0)
       therubyracer (~> 0.10.0)
@@ -74,6 +81,21 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.18)
     multi_json (1.2.0)
+    multipart-post (1.1.5)
+    oauth2 (0.8.0)
+      faraday (~> 0.8)
+      httpauth (~> 0.1)
+      jwt (~> 0.1.4)
+      multi_json (~> 1.0)
+      rack (~> 1.2)
+    omniauth (1.1.1)
+      hashie (~> 1.2)
+      rack
+    omniauth-facebook (1.4.1)
+      omniauth-oauth2 (~> 1.1.0)
+    omniauth-oauth2 (1.1.1)
+      oauth2 (~> 0.8.0)
+      omniauth (~> 1.0)
     pg (0.13.2)
     polyglot (0.3.3)
     populator (1.0.0)
@@ -144,12 +166,14 @@ PLATFORMS
 DEPENDENCIES
   authlogic
   better_exception_app
+  certified
   coffee-rails (~> 3.2.1)
   faker
   hirb
   ios-checkboxes
   jquery-rails
   less-rails-bootstrap
+  omniauth-facebook
   pg
   populator
   public_activity

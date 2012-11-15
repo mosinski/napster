@@ -15,9 +15,9 @@ class UserSessionsController < ApplicationController
   # POST /user_sessions.xml
   def create
     @user_session = UserSession.new(params[:user_session])
-
+    
     respond_to do |format|
-      if @user_session.save
+      if @user_session.save 
         format.html { redirect_to(:fortunes, :notice => 'Zalogowany!') }
         format.xml { render :xml => @user_session, :status => :created, :location => @user_session }
       else
@@ -37,5 +37,15 @@ class UserSessionsController < ApplicationController
       format.html { redirect_to(:root, :notice => 'Wylogowany!') }
       format.xml { head :ok }
     end
+  end
+
+  def createfb
+    session[:current_user] = {:image => request.env['omniauth.auth'][:info][:image],:name => request.env['omniauth.auth'][:info][:name]}
+    redirect_to (:fortunes)
+  end
+
+  def destroyfb
+    session.delete(:current_user)
+    redirect_to root_path
   end
 end

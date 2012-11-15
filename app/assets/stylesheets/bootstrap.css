@@ -5249,3 +5249,9 @@ margin-left:12px;
 .password_test{
 margin-bottom:-5px;
 }
+#nav_nazwa_konta{
+color:rgb(153, 153, 153);
+text-shadow:0pt -1px 0pt rgba(0, 0, 0, 0.25);
+line-height:37px;
+font-weight:bold;
+}

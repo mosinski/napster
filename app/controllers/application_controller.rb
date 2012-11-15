@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   
   helper_method :current_user
+    helper_method :current_userfb
   
   private
   
@@ -13,5 +14,10 @@ class ApplicationController < ActionController::Base
   def current_user
     return @current_user if defined?(@current_user)
     @current_user = current_user_session && current_user_session.record
+
+  end
+
+  def current_userfb
+    session[:current_user]
   end
 end
