@@ -1,3 +1,6 @@
+<% if current_usersocial %>
+current_user.username = current_usersocial[:name]
+<% end %>
 <% title "Nowa Piosenka" %>
 <h1><%= yield(:title) %></h1>
 <%= simple_form_for(@fortune) do |f| %>

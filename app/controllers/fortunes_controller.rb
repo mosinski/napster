@@ -44,6 +44,7 @@ class FortunesController < ApplicationController
  def create
     @fortune = Fortune.new(params[:fortune])
     @fortune.user_username = current_user.username
+
     respond_to do |format|
       if @fortune.save
         format.html { redirect_to @fortune, notice: 'Piosenka pozytywnie stworzona' }
@@ -78,7 +79,7 @@ class FortunesController < ApplicationController
     @fortune.destroy
 
     respond_to do |format|
-      format.html { redirect_to fortunes_url }
+      format.html { redirect_to fortunes_ur, notice: 'Piosenka usunięta.' }
       format.json { head :no_content }
     end
   end
