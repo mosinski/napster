@@ -9,6 +9,9 @@ Napster::Application.routes.draw do
   match '/about' => 'fortunes#about'
   match '/auth/facebook/callback' => 'user_sessions#createfb'
   match '/auth/logout' => 'user_sessions#destroyfb'
+  match '/auth/github/callback' => 'session#creategh'
+  match '/auth/logout' => 'session#destroygh'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
