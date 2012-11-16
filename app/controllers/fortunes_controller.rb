@@ -43,7 +43,11 @@ class FortunesController < ApplicationController
   # POST /fortunes.json
  def create
     @fortune = Fortune.new(params[:fortune])
+    if current_user
     @fortune.user_username = current_user.username
+    else
+    @fortune.user_username = current_usersocial[:name]
+    end
 
     respond_to do |format|
       if @fortune.save
@@ -79,7 +83,7 @@ class FortunesController < ApplicationController
     @fortune.destroy
 
     respond_to do |format|
-      format.html { redirect_to fortunes_ur, notice: 'Piosenka usunięta.' }
+      format.html { redirect_to fortunes_ur, notice: 'Piosenka usunieta.' }
       format.json { head :no_content }
     end
   end
