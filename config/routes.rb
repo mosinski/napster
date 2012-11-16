@@ -8,9 +8,8 @@ Napster::Application.routes.draw do
   match 'logout' => 'user_sessions#destroy', :as => :logout
   match '/about' => 'fortunes#about'
   match '/auth/facebook/callback' => 'user_sessions#createfb'
-  match '/auth/logout' => 'user_sessions#destroyfb'
-  match '/auth/github/callback' => 'session#creategh'
-  match '/auth/logout' => 'session#destroygh'
+  match '/auth/github/callback' => 'user_sessions#creategh'
+  match '/auth/logout' => 'user_sessions#destroysocial'
 
 
   # The priority is based upon order of creation:

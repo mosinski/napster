@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   
   helper_method :current_user
-    helper_method :current_userfb
+  helper_method :current_usersocial
   
   private
   
@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
 
   end
 
-  def current_userfb
+  def current_usersocial
     session[:current_user]
   end
 end

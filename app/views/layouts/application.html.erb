@@ -43,23 +43,21 @@
 	<li id="nav_nazwa_konta"><%= current_user.username %></li>
         <li><%= link_to "Profil", edit_user_path(current_user.id)%></li>
         <li><%= link_to "Wyloguj", :logout%></li>
-        <% else %>
-	<% if current_userfb %>
-	<li id="nav_avatar"><%= image_tag(current_userfb[:image], :class => "avatar", :size => "50x50") %></li>
-	<li id="nav_nazwa_konta"><%= current_userfb[:name] %></li>
+        <% elsif current_usersocial %>
+	<li id="nav_avatar"><%= image_tag(current_usersocial[:image], :class => "avatar", :size => "50x50") %></li>
+	<li id="nav_nazwa_konta"><%= current_usersocial[:name] %></li>
 	<li><%= link_to 'Wyloguj','/auth/logout' %></li>
 	<% else %>
 	<li id="nav_icony"><%= link_to image_tag('gh_icon.png', :title => 'Zaloguj przez Github'),'/auth/github' %></li>
 	<li id="nav_icony"><%= link_to image_tag('fb_icon.png', :title => 'Zaloguj przez Facebook'),'/auth/facebook' %></li>
         <li><%= render :partial => "user_sessions/logowanie" %></li>
         <li><%= link_to "Rejestracja", new_user_path%></li>
-	<% end %>
         <% end %>
 </div>
     </div>
   </div>
 </div>
-<% if current_user or current_userfb %>
+<% if current_user or current_usersocial %>
 <div class="pasek_boczny">
 <p>
 <strong class="ukryj"><%= image_tag("hide.png") %></strong>

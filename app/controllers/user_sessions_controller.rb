@@ -41,22 +41,17 @@ class UserSessionsController < ApplicationController
 
   def createfb
     session[:current_user] = {:image => request.env['omniauth.auth'][:info][:image],:name => request.env['omniauth.auth'][:info][:name]}
-    redirect_to (:fortunes), :notice => "Zalogowany!"
-  end
-
-  def destroyfb
-    session.delete(:current_user)
-    redirect_to root_path, :notice => "Wylogowany!"
+    redirect_to (:fortunes), :notice => "Zalogowany przez Facebook'a!"
   end
 
   def creategh
-    session[:current_user] = {:name => request.env['omniauth.auth'][:info][:name],:avatar_url => request.env['omniauth.auth'][:extra][:avatar_url]}
-    redirect_to root_path
+    session[:current_user] = {:image => request.env['omniauth.auth'][:info][:image],:name => request.env['omniauth.auth'][:info][:name]}
+    redirect_to (:fortunes), :notice => "Zalogowany przez Github!"
   end
 
-  def destroygh
+  def destroysocial
     session.delete(:current_user)
-    redirect_to root_path
+    redirect_to root_path, :notice => "Wylogowany!"
   end
 
 end
