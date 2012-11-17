@@ -40,12 +40,12 @@ class UserSessionsController < ApplicationController
   end
 
   def createfb
-    session[:current_user] = {:image => request.ENV['facebook'][:info][:image],:name => request.ENV['facebook'][:info][:name]}
+    session[:current_user] = {:image => request.env['omniauth.auth'][:info][:image],:name => request.env['omniauth.auth'][:info][:name]}
     redirect_to (:fortunes), :notice => "Zalogowany przez Facebook'a!"
   end
 
   def creategh
-    session[:current_user] = {:image => request.ENV['github'][:info][:image],:name => request.ENV['github'][:info][:name]}
+    session[:current_user] = {:image => request.env['omniauth.auth'][:info][:image],:name => request.env['omniauth.auth'][:info][:name]}
     redirect_to (:fortunes), :notice => "Zalogowany przez Github!"
   end
 
