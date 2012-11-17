@@ -1,5 +1,5 @@
 Rails.application.config.middlew are.use OmniAuth::Builder do
-  provider :facebook, ENV['facebook_KEY'], ENV['facebook_SECRET']
-  provider :github, ENV['github_KEY'], ENV['github_SECRET']
+ provider :facebook, AppConfig.facebook.key, AppConfig.facebook.secret
+ provider :github, AppConfig.github.key, AppConfig.github.secret
 end
 
