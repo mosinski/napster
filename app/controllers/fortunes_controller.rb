@@ -83,7 +83,7 @@ class FortunesController < ApplicationController
     @fortune.destroy
 
     respond_to do |format|
-      format.html { redirect_to fortunes_ur, notice: 'Piosenka usunieta.' }
+      format.html { redirect_to fortunes_url, notice: 'Piosenka usunieta.' }
       format.json { head :no_content }
     end
   end
