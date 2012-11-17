@@ -80,7 +80,16 @@ class FortunesController < ApplicationController
   # DELETE /fortunes/1.json
   def destroy
     @fortune = Fortune.find(params[:id])
-    @fortune.destroy
+    if current_user
+	if current_user.username == @fortune.user_username
+    	@fortune.destroy
+	end
+    else current_usersocial
+	if current_usersocial[:name] == @fortune.user_username
+	@fortune.destroy
+	end
+    end
+	
 
     respond_to do |format|
       format.html { redirect_to fortunes_url, notice: 'Piosenka usunieta.' }
