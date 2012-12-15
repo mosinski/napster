@@ -108,12 +108,11 @@ $('.notice_link').popover('show');
 },
 function (){
 $('.notice_link').popover('hide');
-}
-);
+});
 
 setInterval(function() {
 if($('.checkbox_ptaki').is(":checked")){
-        $('.checkbox_ptaki').prop('checked', true).iphoneStyle("refresh");
+$('.checkbox_ptaki').prop('checked', true).iphoneStyle("refresh");
 $('.ptaki_text_field').val('1');
 $('.checkbox_kolka').prop('checked', false).iphoneStyle("refresh");
 $('.kolka_text_field').val('0');
