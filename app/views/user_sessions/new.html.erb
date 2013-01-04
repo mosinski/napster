@@ -1,5 +1,6 @@
 <% title "Logowanie" %>
 <h1><%= yield(:title) %></h1>
-
+<br>
 <%= render 'form' %>
+<%= link_to 'Zapomniałem hasła » ', '/nie_pamietam_hasla' %> | <%= link_to 'Nie mam konta » ', new_user_path %>
 

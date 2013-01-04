@@ -1,0 +1,16 @@
+<% title "Przypomnienie Hasła" %>
+<h1><%= yield(:title) %></h1>
+<br>
+<%= form_tag "/przypomnienie_hasla" do %>
+
+  <b><%= label_tag(:q, "Nick Profilu: ") %></b>
+
+  <%= text_field_tag(:login_input, nil, :placeholder => "Wpisz swój login z serwisu") %><br><br>
+<span class="label label-info">
+Przypomnienie Hasła, po wpisaniu poprawnego loginu konta na mail podany przy rejestracji zostanie wysłane hasło do .</font>
+</span>
+</p>
+
+  <%= submit_tag " Wyślij ", :class => 'btn btn-success' %>
+
+<% end %>

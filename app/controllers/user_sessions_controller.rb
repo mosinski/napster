@@ -53,5 +53,19 @@ class UserSessionsController < ApplicationController
     session.delete(:current_user)
     redirect_to root_path, :notice => "Wylogowany!"
   end
+  
+  def przypomnienie
+    @user = User.find_by_username(params[:login_input])
+    if @user != NIL
+
+    respond_to do |format|
+      format.html { redirect_to root_url, notice: 'Haslo dostarczono na mail!' }
+      format.json { head :no_content }
+    end
+    else
+    redirect_to root_url, notice: 'Login nieznany!'
+   end
+  end
+
 
 end
