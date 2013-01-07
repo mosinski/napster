@@ -57,9 +57,11 @@ class UserSessionsController < ApplicationController
   def przypomnienie
     @user = User.find_by_username(params[:login_input])
     if @user != NIL
+    @user.kod_dostepu = SecureRandom.hex(10)
+    PasswordResetMailer.password_reset_sender(@user).deliver
 
     respond_to do |format|
-      format.html { redirect_to root_url, notice: 'Haslo dostarczono na mail!' }
+      format.html { redirect_to root_url, notice: 'Dostarczono mail!' }
       format.json { head :no_content }
     end
     else
