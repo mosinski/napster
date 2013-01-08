@@ -12,9 +12,21 @@
     <div class="password_test"><span id="password_time"></span></div>
   </div>
  <div class="field">
- <b><%= label_tag(:q, "Potwierdz Nowe Hasło: ", :class => "label_przypomnienie") %></b>
+ <b><%= label_tag(:q, "Powtórz Nowe Hasło: ", :class => "label_przypomnienie") %></b>
       <%= password_field_tag :password_confirmation %>
   </div>
+<div style="visibility: visible; left: 700px; top: 135px; opacity: 1;" class="jfk-bubble">
+<div class="jfk-bubble-content-id">
+<ul id="signupidvusage-bubble-content" class="secondary" style="margin: 0px 18px 0px 18px;">
 
+  <b>Reset Hasła</b>, <br>
+  Proszę wpisać <u>kod dostępu</u> podany w mailu<br>
+  Wypełnić pola: Nowe Hasło i Powtórz Nowe Hasło<br>
+  Potwierdź a twoje hasło zostanie zmienione.<br><br>
+  Nie znasz kodu dostępu? Przejdź <b><a href="/nie_pamietam_hasla">Tutaj</a></b>
+
+  </ul>
+</div>
+</div>
  <%= submit_tag "Potwierdzam", :class => 'btn btn-success', :id => "wyslij_przypomnienie" %>
 <% end %>
