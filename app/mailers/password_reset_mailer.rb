@@ -6,7 +6,7 @@ class PasswordResetMailer < ActionMailer::Base
 
     @user = user 
 
-    mail(:to => user.email, :subject => "Przypomnienie Hasła!")  
+    mail(:to => user.email, :subject => "Przypomnienie Hasla")  
 
   end
 end
