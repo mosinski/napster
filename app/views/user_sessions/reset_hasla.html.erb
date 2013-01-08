@@ -1,0 +1,20 @@
+<% title "Reset Hasła" %>
+<h1><%= yield(:title) %></h1>
+<br><br>
+<%= form_tag "/nowe_haslo" do %>
+ <div class="field">
+ <b><%= label_tag(:q, "Kod dostępu: ", :class => "label_przypomnienie") %></b>
+    <%= text_field_tag :kod_dostepu_reset %>
+  </div>
+ <div class="field">
+ <b><%= label_tag(:q, "Nowe Hasło: ", :class => "label_przypomnienie") %></b>
+    <%= password_field_tag :password %>
+    <div class="password_test"><span id="password_time"></span></div>
+  </div>
+ <div class="field">
+ <b><%= label_tag(:q, "Potwierdz Nowe Hasło: ", :class => "label_przypomnienie") %></b>
+      <%= password_field_tag :password_confirmation %>
+  </div>
+
+ <%= submit_tag "Potwierdzam", :class => 'btn btn-success', :id => "wyslij_przypomnienie" %>
+<% end %>

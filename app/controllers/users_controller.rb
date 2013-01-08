@@ -80,4 +80,26 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def nowe_haslo
+   @user = User.find_by_kod_dostepu(params[:kod_dostepu_reset])
+   if @user != NIL
+   @user.password = params[:password]
+   @user.password_confirmation = params[:password_confirmation]
+   
+
+    respond_to do |format|
+      if @user.update_attributes(params[:user])
+        format.html { redirect_to root_url, notice: 'Konto uaktualnione!' }
+        format.json { head :no_content }
+      else
+	if (@user.password != @user.password_confirmation)
+        format.html { redirect_to "/reset_hasla", notice: 'Niezgodne hasla!' }
+	end
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+  redirect_to "/reset_hasla", notice: 'Niepoprawny kod dostepu'
+  end
 end

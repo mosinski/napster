@@ -58,6 +58,7 @@ class UserSessionsController < ApplicationController
     @user = User.find_by_username(params[:login_input])
     if @user != NIL
     @user.kod_dostepu = SecureRandom.hex(10)
+    @user.save
     PasswordResetMailer.password_reset_sender(@user).deliver
 
     respond_to do |format|
