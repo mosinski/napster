@@ -36,7 +36,7 @@ display:none;
 </div>
 
 <div class="email_konta">
-  <%= @user.email %><br>
+  <%= @user.email %><%= @user.kod_dostepu %><br>
 </div>
 <div class="piosenki_konta">
 Dodał <%= link_to Fortune.find_all_by_user_username(@user.username).count, fortunes_path+"?utf8=✓&search="+@user.username.to_s %> piosenek

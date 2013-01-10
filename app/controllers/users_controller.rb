@@ -87,7 +87,6 @@ class UsersController < ApplicationController
    @user.password = params[:password]
    @user.password_confirmation = params[:password_confirmation]
    
-
     respond_to do |format|
       if @user.update_attributes(params[:user])
         format.html { redirect_to root_url, notice: 'Konto uaktualnione!' }
@@ -99,7 +98,8 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
-  end
+  else
   redirect_to "/reset_hasla", notice: 'Niepoprawny kod dostepu'
+  end
   end
 end
